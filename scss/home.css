@@ -208,7 +208,7 @@ header .container .bottom ul li a {
 }
 
 .women-product .list-product {
-  margin: 0 auto;
+  margin: 50px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
