@@ -1,0 +1,39 @@
+* {
+  font-family: "Hind", sans-serif;
+}
+
+header .top {
+  margin: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .top .logo a {
+  position: absolute;
+  left: 45%;
+}
+
+header .top .right-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .top .right-header .icon {
+  margin: 0 10px;
+}
+
+header .top .right-header .icon:last-child {
+  margin-right: 0;
+}
+
+header .top .right-header .icon i {
+  color: #777777;
+  font-weight: 300;
+  font-size: 16px;
+}
+/*# sourceMappingURL=landing.css.map */
