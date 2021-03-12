@@ -2,9 +2,10 @@
   font-family: "Hind", sans-serif;
 }
 
-html, body {
-  width: 100vw;
-  height: 100vh;
+html,
+body {
+  width: 100%;
+  height: 1700px;
 }
 
 header .container {
@@ -70,6 +71,10 @@ header .container .bottom ul li a {
   text-transform: uppercase;
   font-size: 14px;
   color: #777777;
+}
+
+header .container .bottom ul li a.active {
+  color: #2879fe;
 }
 
 .women-sale {
@@ -153,7 +158,7 @@ header .container .bottom ul li a {
 
 .women-product .women-product-title h3 {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -181,34 +186,74 @@ header .container .bottom ul li a {
   color: black;
 }
 
-.women-product .women-product-title ul .button-women-sale {
+.women-product .women-product-title .button-women-sale {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
-.women-product .women-product-title ul .button-women-sale .button-left {
-  width: 40px;
-  height: 50px;
+.women-product .women-product-title .button-women-sale .button-left {
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background: #777777;
+  margin-right: 10px;
   position: relative;
 }
 
-.women-product .women-product-title ul .button-women-sale .button-left::before {
+.women-product .women-product-title .button-women-sale .button-left::before {
   content: "";
-  width: 15px;
-  height: 15x;
-  border-top: 1px solid #777777;
-  border-left: 1px solid #777777;
+  width: 7px;
+  height: 7px;
   position: absolute;
   top: 50%;
   left: 50%;
+  border-top: 1px solid #777777;
+  border-left: 1px solid #777777;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.women-product .women-product-title .button-women-sale .button-left:hover {
+  background: #2879fe;
+}
+
+.women-product .women-product-title .button-women-sale .button-left:hover::before {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+}
+
+.women-product .women-product-title .button-women-sale .button-right {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.women-product .women-product-title .button-women-sale .button-right::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-bottom: 1px solid #777777;
+  border-right: 1px solid #777777;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.women-product .women-product-title .button-women-sale .button-right:hover {
+  background: #2879fe;
+}
+
+.women-product .women-product-title .button-women-sale .button-right:hover::after {
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .women-product .list-product {
-  margin: 50px 20px;
+  margin: 70px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,6 +349,7 @@ footer {
   margin: 30px 0;
   width: 100%;
   height: 300px;
+  background: rgba(255, 255, 254, 0.986);
   position: relative;
 }
 
@@ -346,7 +392,7 @@ footer .container .footer-top .footer-top-input-mail {
 footer .container .footer-top .footer-top-input-mail input {
   width: 650px;
   height: 40px;
-  border-radius: 0;
+  border-radius: 8px;
   text-align: start;
 }
 
@@ -478,18 +524,35 @@ footer .container .footer-bottom ul.payments li a img {
 }
 
 .back-to-top {
-  width: 50px;
-  height: 50px;
-  background: #2879fe;
-  position: fixed;
+  position: relative;
 }
 
-.back-to-top::before {
-  content: "BACK TO TOP";
-  width: 100%;
-  height: 100%;
+.back-to-top a {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: rgba(34, 104, 219, 0.75);
+  position: fixed;
+  bottom: 100px;
+  right: 2px;
+}
+
+.back-to-top a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.back-to-top a:hover {
+  background: #2879fe;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 /*# sourceMappingURL=home.css.map */
