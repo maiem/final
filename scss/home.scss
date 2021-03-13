@@ -7,11 +7,13 @@ $secondaryColor: rgb(119, 119, 119);
 
 html,
 body {
-  width: 100%;
-  height: 1700px;
+  scroll-behavior: smooth;
 }
 
 header {
+  width: 100%;
+  height: 80px;
+
   .container {
     margin: 0 auto;
     .top {
@@ -37,6 +39,7 @@ header {
           &:last-child {
             margin-right: 0;
           }
+
           i {
             color: $secondaryColor;
             font-weight: 300;
@@ -56,9 +59,8 @@ header {
         align-items: center;
 
         li {
-          margin: 10px;
-
           a {
+            padding: 15px;
             text-transform: uppercase;
             font-size: 14px;
             color: $secondaryColor;
@@ -74,7 +76,7 @@ header {
 }
 
 .women-sale {
-  width: 100%;
+  //width: 100%;
   //height: 1000px;
   //margin: 10px 0 30px;
 
@@ -120,24 +122,24 @@ header {
         }
 
         .button {
-          margin: 20px 40px 0;
-          width: 150px;
-          height: 50px;
-          background: rgba(34, 105, 219, 0.904);
-          border-radius: 8px;
-
+          margin-top: 20px;
           a {
             display: inline-block;
+
+            width: 150px;
+            height: 50px;
+            background: $primaryColor;
+            border-radius: 8px;
             color: white;
             text-transform: uppercase;
             font-weight: 300;
             font-size: 14px;
             padding-top: 15px;
             text-align: center;
-          }
 
-          &:hover {
-            background: $primaryColor;
+            &:hover {
+              background: rgba(34, 105, 219, 0.904);
+            }
           }
         }
       }
@@ -283,38 +285,150 @@ header {
 
           margin: 10px;
 
-          a{
-            padding: 10px;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            position: relative;
-
-            &::before{
-            content: "";
+          a {
+            margin: 5px;
 
             width: 45px;
             height: 45px;
             border-radius: 50%;
 
             background: rgba(255, 255, 255, 0.623);
+            transition: all 0.2s ease-in;
 
-            position: absolute;
-            top: 0%;
-            left: -10%;
+            visibility: hidden;
+            opacity: 0;
+            position: relative;
 
-            margin-bottom: 10px;
+            &:hover {
+              background: $primaryColor;
+              transition: all 0.2s ease-in;
+
+              i {
+                color: white;
+              }
             }
 
             i {
-              width: 45px;
-              height: 45px;
-              border-radius: 50%;
               color: black;
               font-size: 14px;
               font-weight: 300;
+              //align-items: center;
+
+              position: absolute;
+              top: 50%;
+              left: 50%;
+
+              transform: translate(-50%, -50%);
             }
           }
+        }
+      }
+
+      .discription {
+        padding-top: 16px;
+        text-align: center;
+
+        .brand {
+          a {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 500;
+            color: $secondaryColor;
+            transition: all 0.4s ease-in;
+
+            &:hover {
+              color: $primaryColor;
+              transition: all 0.4s ease-in;
+            }
+          }
+        }
+
+        .rating-star {
+          i {
+            font-size: 10px;
+            color: $secondaryColor;
+          }
+        }
+
+        .product-name {
+          a {
+            font-size: 14px;
+            color: rgb(41, 39, 39);
+            text-transform: capitalize;
+            transition: all 0.4s ease-in;
+
+            &:hover {
+              color: $primaryColor;
+              transition: all 0.4s ease-in;
+            }
+          }
+        }
+
+        .price {
+          p {
+            color: rgb(41, 39, 39);
+            font-size: 16px;
+            font-weight: 600;
+          }
+
+          .sale {
+            color: rgba(255, 0, 0, 0.87);
+
+            span {
+              color: rgb(41, 39, 39);
+              text-decoration: line-through;
+            }
+          }
+        }
+
+        form {
+          // visibility: hidden;
+          // opacity: 0;
+
+          .add-to-cart {
+            margin: 5px 40px;
+            width: 130px;
+            height: 40px;
+            border-radius: 8px;
+            background: $primaryColor;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+              color: white;
+              font-size: 15px;
+            }
+
+            p {
+              padding-left: 10px;
+              text-transform: uppercase;
+              transform: translateY(10%);
+              color: white;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .image-box {
+          .list-button {
+            a {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+
+        .description {
+          transform: translateY(-40%);
+          transition: all .2s ease-in;
+
+          // form {
+          //   visibility: visible;
+          //   opacity: 1;
+          // }
         }
       }
     }
@@ -362,8 +476,10 @@ header {
         width: 225px;
         height: 225px;
         position: relative;
+        transition: all 0.4s ease-in;
 
         &:hover {
+          transition: all 0.4s ease-in;
           i {
             visibility: visible;
             opacity: 1;
@@ -406,17 +522,20 @@ header {
 }
 
 footer {
-  margin: 30px 0;
   width: 100%;
   height: 300px;
-  background: rgba(255, 255, 254, 0.986);
-
+  padding-top: 30px;
+  background: rgb(247, 248, 250);
   position: relative;
 
   .container {
-    margin: 0 auto;
+    width: 100%;
+    height: 300px;
 
     .footer-top {
+      width: 100%;
+      height: 200px;
+      padding-top: 20px;
       text-align: center;
       position: relative;
 
@@ -442,7 +561,6 @@ footer {
       }
 
       .footer-top-input-mail {
-        margin: 100px 20px;
         position: absolute;
         top: 50%;
         left: 25%;
@@ -453,16 +571,13 @@ footer {
           //background: rgb(241, 238, 238);
           border-radius: 8px;
           text-align: start;
+          padding: 0 10px;
 
-          &:hover {
+          &:focus {
             border: 1px solid $primaryColor;
-            border-right: none;
+
             border-bottom-left-radius: 8px;
             border-top-left-radius: 8px;
-          }
-
-          &::placeholder {
-            padding: 0 10px;
           }
         }
 
@@ -508,11 +623,12 @@ footer {
     }
 
     .footer-bottom {
-      margin: 20px 70px;
-
+      height: 50px;
+      background: white;
       position: absolute;
       top: 0;
-      transform: translateY(200px);
+      transform: translateY(240px);
+      padding: 30px 70px;
 
       display: flex;
       flex-wrap: wrap;
@@ -572,7 +688,7 @@ footer {
     width: 60px;
     height: 60px;
     border-radius: 8px;
-    background-color: rgba(34, 105, 219, 0.849);
+    background-color: $primaryColor;
     transition: all 0.4s ease-in;
     //position: fixed;
 
@@ -595,7 +711,7 @@ footer {
     }
 
     &:hover {
-      background: $primaryColor;
+      background: rgba(34, 105, 219, 0.904);
       transition: all 0.4s ease;
 
       &::before {

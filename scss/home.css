@@ -4,8 +4,12 @@
 
 html,
 body {
+  scroll-behavior: smooth;
+}
+
+header {
   width: 100%;
-  height: 1700px;
+  height: 80px;
 }
 
 header .container {
@@ -59,11 +63,8 @@ header .container .bottom ul {
           align-items: center;
 }
 
-header .container .bottom ul li {
-  margin: 10px;
-}
-
 header .container .bottom ul li a {
+  padding: 15px;
   text-transform: uppercase;
   font-size: 14px;
   color: #777777;
@@ -71,10 +72,6 @@ header .container .bottom ul li a {
 
 header .container .bottom ul li a.active {
   color: #2879fe;
-}
-
-.women-sale {
-  width: 100%;
 }
 
 .women-sale .container {
@@ -122,15 +119,15 @@ header .container .bottom ul li a.active {
 }
 
 .women-sale .container .background .women-sale-description .button {
-  margin: 20px 40px 0;
-  width: 150px;
-  height: 50px;
-  background: rgba(34, 105, 219, 0.904);
-  border-radius: 8px;
+  margin-top: 20px;
 }
 
 .women-sale .container .background .women-sale-description .button a {
   display: inline-block;
+  width: 150px;
+  height: 50px;
+  background: #2879fe;
+  border-radius: 8px;
   color: white;
   text-transform: uppercase;
   font-weight: 300;
@@ -139,8 +136,8 @@ header .container .bottom ul li a.active {
   text-align: center;
 }
 
-.women-sale .container .background .women-sale-description .button:hover {
-  background: #2879fe;
+.women-sale .container .background .women-sale-description .button a:hover {
+  background: rgba(34, 105, 219, 0.904);
 }
 
 .women-product .women-product-title {
@@ -297,32 +294,133 @@ header .container .bottom ul li a.active {
 }
 
 .women-product .list-product .product .image-box .list-button a {
-  padding: 10px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  position: relative;
-}
-
-.women-product .list-product .product .image-box .list-button a::before {
-  content: "";
+  margin: 5px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.623);
-  position: absolute;
-  top: 0%;
-  left: -10%;
-  margin-bottom: 10px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+}
+
+.women-product .list-product .product .image-box .list-button a:hover {
+  background: #2879fe;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.women-product .list-product .product .image-box .list-button a:hover i {
+  color: white;
 }
 
 .women-product .list-product .product .image-box .list-button a i {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
   color: black;
   font-size: 14px;
   font-weight: 300;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.women-product .list-product .product .discription {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.women-product .list-product .product .discription .brand a {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #777777;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.women-product .list-product .product .discription .brand a:hover {
+  color: #2879fe;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.women-product .list-product .product .discription .rating-star i {
+  font-size: 10px;
+  color: #777777;
+}
+
+.women-product .list-product .product .discription .product-name a {
+  font-size: 14px;
+  color: #292727;
+  text-transform: capitalize;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.women-product .list-product .product .discription .product-name a:hover {
+  color: #2879fe;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.women-product .list-product .product .discription .price p {
+  color: #292727;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.women-product .list-product .product .discription .price .sale {
+  color: rgba(255, 0, 0, 0.87);
+}
+
+.women-product .list-product .product .discription .price .sale span {
+  color: #292727;
+  text-decoration: line-through;
+}
+
+.women-product .list-product .product .discription form .add-to-cart {
+  margin: 5px 40px;
+  width: 130px;
+  height: 40px;
+  border-radius: 8px;
+  background: #2879fe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.women-product .list-product .product .discription form .add-to-cart i {
+  color: white;
+  font-size: 15px;
+}
+
+.women-product .list-product .product .discription form .add-to-cart p {
+  padding-left: 10px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  color: white;
+}
+
+.women-product .list-product .product:hover .image-box .list-button a {
+  visibility: visible;
+  opacity: 1;
+}
+
+.women-product .list-product .product:hover .description {
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .follow-ig .container .title {
@@ -368,6 +466,13 @@ header .container .bottom ul li a.active {
   width: 225px;
   height: 225px;
   position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.follow-ig .container .image-row a:hover {
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 
 .follow-ig .container .image-row a:hover i {
@@ -404,18 +509,22 @@ header .container .bottom ul li a.active {
 }
 
 footer {
-  margin: 30px 0;
   width: 100%;
   height: 300px;
-  background: rgba(255, 255, 254, 0.986);
+  padding-top: 30px;
+  background: #f7f8fa;
   position: relative;
 }
 
 footer .container {
-  margin: 0 auto;
+  width: 100%;
+  height: 300px;
 }
 
 footer .container .footer-top {
+  width: 100%;
+  height: 200px;
+  padding-top: 20px;
   text-align: center;
   position: relative;
 }
@@ -441,7 +550,6 @@ footer .container .footer-top .footer-top-description p {
 }
 
 footer .container .footer-top .footer-top-input-mail {
-  margin: 100px 20px;
   position: absolute;
   top: 50%;
   left: 25%;
@@ -452,29 +560,13 @@ footer .container .footer-top .footer-top-input-mail input {
   height: 40px;
   border-radius: 8px;
   text-align: start;
+  padding: 0 10px;
 }
 
-footer .container .footer-top .footer-top-input-mail input:hover {
+footer .container .footer-top .footer-top-input-mail input:focus {
   border: 1px solid #2879fe;
-  border-right: none;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
-}
-
-footer .container .footer-top .footer-top-input-mail input::-webkit-input-placeholder {
-  padding: 0 10px;
-}
-
-footer .container .footer-top .footer-top-input-mail input:-ms-input-placeholder {
-  padding: 0 10px;
-}
-
-footer .container .footer-top .footer-top-input-mail input::-ms-input-placeholder {
-  padding: 0 10px;
-}
-
-footer .container .footer-top .footer-top-input-mail input::placeholder {
-  padding: 0 10px;
 }
 
 footer .container .footer-top .footer-top-input-mail button {
@@ -521,11 +613,13 @@ footer .container .footer-top .footer-top-contact a i:hover {
 }
 
 footer .container .footer-bottom {
-  margin: 20px 70px;
+  height: 50px;
+  background: white;
   position: absolute;
   top: 0;
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
+  -webkit-transform: translateY(240px);
+          transform: translateY(240px);
+  padding: 30px 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -589,7 +683,7 @@ footer .container .footer-bottom ul.payments li a img {
   width: 60px;
   height: 60px;
   border-radius: 8px;
-  background-color: rgba(34, 105, 219, 0.849);
+  background-color: #2879fe;
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   position: fixed;
@@ -611,7 +705,7 @@ footer .container .footer-bottom ul.payments li a img {
 }
 
 .back-to-top a:hover {
-  background: #2879fe;
+  background: rgba(34, 105, 219, 0.904);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
