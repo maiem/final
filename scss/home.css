@@ -47,10 +47,6 @@ header .container .top .right-header .icon i {
   font-size: 16px;
 }
 
-header .container .bottom {
-  margin: 10px;
-}
-
 header .container .bottom ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,7 +75,6 @@ header .container .bottom ul li a.active {
 
 .women-sale {
   width: 100%;
-  margin: 10px 0 30px;
 }
 
 .women-sale .container {
@@ -88,15 +83,16 @@ header .container .bottom ul li a.active {
 
 .women-sale .container .background {
   width: 100%;
-  height: 750px;
+  height: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-image: url("https://cdn.shopify.com/s/files/1/0031/6604/4224/files/demo18_01_2048x.png?v=1542736595");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 80% 24px;
   background-attachment: fixed;
+  overflow: hidden;
   position: relative;
 }
 
@@ -129,7 +125,7 @@ header .container .bottom ul li a.active {
   margin: 20px 40px 0;
   width: 150px;
   height: 50px;
-  background: #2879fe;
+  background: rgba(34, 105, 219, 0.904);
   border-radius: 8px;
 }
 
@@ -141,6 +137,10 @@ header .container .bottom ul li a.active {
   font-size: 14px;
   padding-top: 15px;
   text-align: center;
+}
+
+.women-sale .container .background .women-sale-description .button:hover {
+  background: #2879fe;
 }
 
 .women-product .women-product-title {
@@ -158,7 +158,7 @@ header .container .bottom ul li a.active {
 
 .women-product .women-product-title h3 {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
 }
 
@@ -175,6 +175,7 @@ header .container .bottom ul li a.active {
 .women-product .women-product-title ul li a {
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 600;
   color: #777777;
 }
 
@@ -265,6 +266,63 @@ header .container .bottom ul li a.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.women-product .list-product .product .image-box {
+  position: relative;
+}
+
+.women-product .list-product .product .image-box a .img {
+  width: 100%;
+}
+
+.women-product .list-product .product .image-box .list-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.women-product .list-product .product .image-box .list-button a {
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.women-product .list-product .product .image-box .list-button a::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.623);
+  position: absolute;
+  top: 0%;
+  left: -10%;
+  margin-bottom: 10px;
+}
+
+.women-product .list-product .product .image-box .list-button a i {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .follow-ig .container .title {
@@ -531,9 +589,11 @@ footer .container .footer-bottom ul.payments li a img {
   width: 60px;
   height: 60px;
   border-radius: 8px;
-  background-color: rgba(34, 104, 219, 0.75);
+  background-color: rgba(34, 105, 219, 0.849);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
   position: fixed;
-  bottom: 100px;
+  bottom: 80px;
   right: 2px;
 }
 
@@ -552,7 +612,14 @@ footer .container .footer-bottom ul.payments li a img {
 
 .back-to-top a:hover {
   background: #2879fe;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.back-to-top a:hover::before {
+  -webkit-transform: translate(-50%, -100%) rotate(45deg);
+          transform: translate(-50%, -100%) rotate(45deg);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 /*# sourceMappingURL=home.css.map */

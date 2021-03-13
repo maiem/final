@@ -24,10 +24,16 @@ const numb = [1,2, -3,4];
 //     return value < 0;
 // })
 
-const str = ['a','d','y','q'];
-const arr = str.sort();
-const newArr = numb.sort((a,b)=>{
-    return b - a;
-})
+// const str = ['a','d','y','q'];
+// const arr = str.sort();
+// const newArr = numb.sort((a,b)=>{
+//     return b - a;
+// })
 
-console.log(newArr);
+// console.log(newArr);
+
+// const myArr = ['ha mai anh', 'ha huu an', 'ha thanh truc'];
+
+// const newArr = myArr.map((value, index) =>{
+//     return value.split()
+// })

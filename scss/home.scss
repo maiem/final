@@ -49,7 +49,6 @@ header {
     .bottom {
       // position: absolute;
       // left: 45%;
-      margin: 10px;
 
       ul {
         display: flex;
@@ -64,7 +63,7 @@ header {
             font-size: 14px;
             color: $secondaryColor;
 
-            &.active{
+            &.active {
               color: $primaryColor;
             }
           }
@@ -77,21 +76,22 @@ header {
 .women-sale {
   width: 100%;
   //height: 1000px;
-  margin: 10px 0 30px;
+  //margin: 10px 0 30px;
 
   .container {
     margin: 0 auto;
 
     .background {
       width: 100%;
-      height: 750px;
+      height: 650px;
       display: flex;
 
       background-image: url("https://cdn.shopify.com/s/files/1/0031/6604/4224/files/demo18_01_2048x.png?v=1542736595");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 80% 24px;
       background-attachment: fixed;
+      overflow: hidden;
 
       position: relative;
 
@@ -123,7 +123,7 @@ header {
           margin: 20px 40px 0;
           width: 150px;
           height: 50px;
-          background: $primaryColor;
+          background: rgba(34, 105, 219, 0.904);
           border-radius: 8px;
 
           a {
@@ -134,6 +134,10 @@ header {
             font-size: 14px;
             padding-top: 15px;
             text-align: center;
+          }
+
+          &:hover {
+            background: $primaryColor;
           }
         }
       }
@@ -151,7 +155,7 @@ header {
 
     h3 {
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 500;
     }
 
@@ -164,6 +168,7 @@ header {
         a {
           text-transform: uppercase;
           font-size: 14px;
+          font-weight: 600;
           color: $secondaryColor;
 
           &.active {
@@ -178,75 +183,76 @@ header {
     }
 
     .button-women-sale {
-        display: flex;
-        margin: 0 20px;
-        .button-left {
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
+      display: flex;
+      margin: 0 20px;
+      .button-left {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
 
-          margin-right: 10px;
-          position: relative;
+        margin-right: 10px;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 7px;
+          height: 7px;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          border-top: 1px solid $secondaryColor;
+          border-left: 1px solid $secondaryColor;
+
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+          background: $primaryColor;
 
           &::before {
-            content: "";
-            width: 7px;
-            height: 7px;
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            border-top: 1px solid $secondaryColor;
-            border-left: 1px solid $secondaryColor;
-
-            transform: translate(-50%, -50%) rotate(-45deg);
-          }
-
-          &:hover {
-            background: $primaryColor;
-
-            &::before {
-              border-top: 1px solid white;
-              border-left: 1px solid white;
-            }
+            border-top: 1px solid white;
+            border-left: 1px solid white;
           }
         }
+      }
 
-        .button-right {
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
+      .button-right {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
 
-          position: relative;
+        position: relative;
+
+        &::after {
+          content: "";
+
+          width: 7px;
+          height: 7px;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          border-bottom: 1px solid $secondaryColor;
+          border-right: 1px solid $secondaryColor;
+
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+          background: $primaryColor;
 
           &::after {
-            content: "";
-
-            width: 7px;
-            height: 7px;
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            border-bottom: 1px solid $secondaryColor;
-            border-right: 1px solid $secondaryColor;
-
-            transform: translate(-50%, -50%) rotate(-45deg);
-          }
-
-          &:hover {
-            background: $primaryColor;
-
-            &::after {
-              border-bottom: 1px solid white;
-              border-right: 1px solid white;
-            }
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
           }
         }
+      }
     }
   }
+
   .list-product {
     margin: 70px 20px;
     display: flex;
@@ -255,8 +261,63 @@ header {
     justify-content: space-between;
     align-items: center;
 
-      // .product {
-      // }
+    .product {
+      .image-box {
+        position: relative;
+
+        a {
+          .img {
+            width: 100%;
+          }
+        }
+
+        .list-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          margin: 10px;
+
+          a{
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            position: relative;
+
+            &::before{
+            content: "";
+
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.623);
+
+            position: absolute;
+            top: 0%;
+            left: -10%;
+
+            margin-bottom: 10px;
+            }
+
+            i {
+              width: 45px;
+              height: 45px;
+              border-radius: 50%;
+              color: black;
+              font-size: 14px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -507,19 +568,20 @@ footer {
 .back-to-top {
   position: relative;
 
-  a{
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
-  background-color: rgba(34, 104, 219, 0.75);
-  //position: fixed;
+  a {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: rgba(34, 105, 219, 0.849);
+    transition: all 0.4s ease-in;
+    //position: fixed;
 
-  position: fixed;
-  bottom: 100px;
-  right: 2px;
-  
+    position: fixed;
+    bottom: 80px;
+    right: 2px;
+
     &::before {
-      content: ""; 
+      content: "";
       width: 10px;
       height: 10px;
 
@@ -529,17 +591,18 @@ footer {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
     }
 
-    &:hover{
+    &:hover {
       background: $primaryColor;
-      transition: all .4s ease;
+      transition: all 0.4s ease;
 
-      //  &::before{
-      //    transform: translateY(-50%);
-      //    //transform-origin: 10% -10%;
-      //  }
+      &::before {
+        transform: translate(-50%, -100%) rotate(45deg);
+        //transform-origin: 10% -10%;
+        transition: all 0.4s ease-in;
+      }
     }
   }
 }
