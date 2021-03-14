@@ -75,7 +75,7 @@ header {
   }
 }
 
-.women-sale {
+.sale {
   //width: 100%;
   //height: 1000px;
   //margin: 10px 0 30px;
@@ -147,8 +147,8 @@ header {
   }
 }
 
-.women-product {
-  .women-product-title {
+.product {
+  .product-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -264,6 +264,8 @@ header {
     align-items: center;
 
     .product {
+      position: relative;
+
       .image-box {
         position: relative;
 
@@ -325,7 +327,10 @@ header {
       }
 
       .discription {
-        padding-top: 16px;
+        // position: absolute;
+        // bottom: -60%;
+        // left: 0;
+
         text-align: center;
 
         .brand {
@@ -382,9 +387,6 @@ header {
         }
 
         form {
-          // visibility: hidden;
-          // opacity: 0;
-
           .add-to-cart {
             margin: 5px 40px;
             width: 130px;
@@ -395,6 +397,13 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            // visibility: hidden;
+            // opacity: 0;
+
+            // position: absolute;
+            // top: 0;
+            // left: 0;
 
             i {
               color: white;
@@ -422,12 +431,14 @@ header {
         }
 
         .description {
-          transform: translateY(-40%);
-          transition: all .2s ease-in;
+          transform: translateY(-30px);
+          transition: all 0.4s ease;
 
           // form {
-          //   visibility: visible;
-          //   opacity: 1;
+          //   .add-to-cart {
+          //     visibility: visible;
+          //     opacity: 1;
+          //   }
           // }
         }
       }
@@ -689,7 +700,7 @@ footer {
     height: 60px;
     border-radius: 8px;
     background-color: $primaryColor;
-    transition: all 0.4s ease-in;
+    transition: all .4s ease-in;
     //position: fixed;
 
     position: fixed;
@@ -712,11 +723,9 @@ footer {
 
     &:hover {
       background: rgba(34, 105, 219, 0.904);
-      transition: all 0.4s ease;
 
       &::before {
         transform: translate(-50%, -100%) rotate(45deg);
-        //transform-origin: 10% -10%;
         transition: all 0.4s ease-in;
       }
     }
