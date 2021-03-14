@@ -93,7 +93,7 @@ header .container .bottom ul li a.active {
   position: relative;
 }
 
-.sale .container .background .women-sale-description {
+.sale .container .background .sale-description {
   position: absolute;
   left: 50%;
   top: 20%;
@@ -102,7 +102,7 @@ header .container .bottom ul li a.active {
   text-align: center;
 }
 
-.sale .container .background .women-sale-description h3 {
+.sale .container .background .sale-description h3 {
   color: #2879fe;
   text-transform: uppercase;
   font-size: 30px;
@@ -110,7 +110,7 @@ header .container .bottom ul li a.active {
   margin-bottom: 10px;
 }
 
-.sale .container .background .women-sale-description p {
+.sale .container .background .sale-description p {
   color: white;
   font-size: 60px;
   font-weight: 500;
@@ -118,11 +118,11 @@ header .container .bottom ul li a.active {
   line-height: 60px;
 }
 
-.sale .container .background .women-sale-description .button {
+.sale .container .background .sale-description .button {
   margin-top: 20px;
 }
 
-.sale .container .background .women-sale-description .button a {
+.sale .container .background .sale-description .button a {
   display: inline-block;
   width: 150px;
   height: 50px;
@@ -136,7 +136,7 @@ header .container .bottom ul li a.active {
   text-align: center;
 }
 
-.sale .container .background .women-sale-description .button a:hover {
+.sale .container .background .sale-description .button a:hover {
   background: rgba(34, 105, 219, 0.904);
 }
 
@@ -384,12 +384,7 @@ header .container .bottom ul li a.active {
   text-decoration: line-through;
 }
 
-.product .list-product .product .discription form .add-to-cart {
-  margin: 5px 40px;
-  width: 130px;
-  height: 40px;
-  border-radius: 8px;
-  background: #2879fe;
+.product .list-product .product .discription form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,6 +394,13 @@ header .container .bottom ul li a.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.product .list-product .product .discription form .add-to-cart {
+  width: 130px;
+  height: 40px;
+  border-radius: 8px;
+  background: #2879fe;
 }
 
 .product .list-product .product .discription form .add-to-cart i {
