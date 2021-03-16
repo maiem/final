@@ -12,12 +12,15 @@ body {
 
 header {
   width: 100%;
-  height: 80px;
+  height: 100px;
 
   .container {
+    width: 70%;
+    height: 100%;
     margin: 0 auto;
+
     .top {
-      margin: 10px 50px;
+      padding: 10px 50px 0; 
       display: flex;
       justify-content: space-between;
 
@@ -27,46 +30,273 @@ header {
           left: 45%;
         }
       }
+
       .right-header {
-        display: flex;
+        ul {
+          display: flex;
+          justify-content: space-between;
 
-        //   justify-content: space-around;
-        //   align-items: center;
+          position: relative;
 
-        .icon {
-          margin: 0 10px;
+          li{
+            &:hover {
+              color: $primaryColor;
+              .ribbon{
+                visibility: visible;
+                opacity: 1;
+                z-index: 1;
+              }
+            }
 
-          &:last-child {
-            margin-right: 0;
+            button{
+              padding: 0 30px;
+              background: white;
+  
+              i {
+                color: $secondaryColor;
+                font-weight: 300;
+                font-size: 16px;
+              }
+            }
+  
+            .ribbon {
+              margin-top: 10px;
+              text-align: center;
+              white-space: nowrap;
+  
+              visibility: hidden;
+              opacity: 0;
+              transition: all 0.2s ease;
+  
+              .wrapper-ribbon {
+                position: relative;
+                display: inline;
+    
+                padding: 2px 10px;
+                background: white;
+                box-shadow: 0 0 2px 1px rgba($color: #ccc, $alpha: 0.8);
+                border-radius: 8px;
+  
+                &::before{
+                  content: "";
+                  position: absolute;
+                  left: 50%;
+                  top: -1px;
+                  
+                  border-left: 1px solid rgba($color: gray, $alpha: 0.5);
+                  border-bottom: 1px solid rgba($color: gray, $alpha: 0.5);
+  
+                  width: 5px;
+                  height: 5px;
+                  transform: translate(-50%,-50%) rotate(135deg);
+                  //z-index: -1;
+                }
+  
+                span {
+                  font-size: 12px;
+                  color: black;
+                  text-transform: capitalize;
+                }
+              }
+            }
           }
-
-          i {
-            color: $secondaryColor;
-            font-weight: 300;
-            font-size: 16px;
           }
-        }
       }
     }
 
     .bottom {
-      // position: absolute;
-      // left: 45%;
-
-      ul {
+      > ul {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        li {
+        position: relative;
+
+        > li {
           a {
-            padding: 15px;
+            padding: 10px;
             text-transform: uppercase;
             font-size: 14px;
             color: $secondaryColor;
 
             &.active {
               color: $primaryColor;
+            }
+
+            &:hover {
+              color: $primaryColor;
+            }
+          }
+
+          &:hover {
+            .dropdown-home {
+              visibility: visible;
+              opacity: 1;
+              transform: translateY(35px);
+            }
+          }
+
+          .dropdown-home {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background: white;
+            display: flex;
+            flex-direction: column;
+
+            box-shadow: 0 0 8px 2px rgba($color: #ccc, $alpha: 0.2);
+
+            visibility: hidden;
+            opacity: 0;
+
+            z-index: 2;
+            transition: all 0.4s ease;
+
+            .row-top {
+              display: flex;
+              flex-basis: 25%;
+
+              .column {
+                padding-left: 10px;
+                padding-right: 10px;
+
+                a {
+                  font-size: 14px;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                  padding: 10px 16px 10px;
+                }
+
+                ul {
+                  li {
+                    position: relative;
+
+                    a {
+                      text-transform: capitalize;
+                      font-size: 14px;
+                      font-weight: 300;
+                      color: $secondaryColor;
+
+                      padding: 6px 14px 6px;
+                      position: relative;
+
+                      &:hover {
+                        color: $primaryColor;
+                      }
+
+                      span {
+                        background: $primaryColor;
+                        color: white;
+                        font-size: 10px;
+                        padding: 2px 3px;
+                        text-transform: capitalize;
+                      }
+
+                      .popular {
+                        background: rgba(255, 166, 0, 0.904);
+                      }
+                    }
+
+                    .image-hover {
+                      width: 150px;
+                      height: 330px;
+
+                      background-image: url("https://cdn.shopify.com/s/files/1/0130/5041/3114/files/mmh01_280x.png");
+                      background-size: cover;
+                      background-repeat: no-repeat;
+
+                      position: absolute;
+                      top: 0;
+                      left: 100%;
+
+                      z-index: 2;
+
+                      visibility: hidden;
+                      opacity: 0;
+                    }
+
+                    &:hover {
+                      .image-hover {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateY(5px);
+                        transition: all 0.3s ease-in;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .row-bottom {
+              display: flex;
+              flex-basis: 50%;
+
+              .column-left {
+                position: relative;
+
+                a {
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+
+                .small-description {
+                  position: absolute;
+                  top: 20%;
+                  left: 5%;
+
+                  a {
+                    span {
+                      font-size: 25px;
+                      font-weight: 600;
+                      text-transform: capitalize;
+                      color: black;
+                    }
+
+                    text-transform: capitalize;
+
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: black;
+                    line-height: 1.5;
+                  }
+                }
+              }
+
+              .column-right {
+                position: relative;
+
+                a {
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+
+                .small-description {
+                  position: absolute;
+                  top: 20%;
+                  left: 5%;
+
+                  a {
+                    span {
+                      font-size: 30px;
+                      font-weight: 600;
+                      text-transform: capitalize;
+                      color: white;
+                    }
+
+                    text-transform: lowercase;
+                    line-height: 1.5;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: white;
+                  }
+                }
+              }
             }
           }
         }
@@ -75,70 +305,133 @@ header {
   }
 }
 
-.sale {
-  // width: 100%;
-  // height: 1000px;
-  //margin: 10px 0 30px;
+.page-content {
+  //z-index: -1;
+  .women {
+    .sale {
+      .background {
+        width: 100%;
+        height: 650px;
+        display: flex;
 
-  .container {
-    margin: 0 auto;
+        background-image: url("https://cdn.shopify.com/s/files/1/0031/6604/4224/files/demo18_01_2048x.png?v=1542736595");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 80% 24px;
+        background-attachment: fixed;
+        overflow: hidden;
 
-    .background {
-      width: 100%;
-      height: 650px;
-      display: flex;
+        position: relative;
 
-      background-image: url("https://cdn.shopify.com/s/files/1/0031/6604/4224/files/demo18_01_2048x.png?v=1542736595");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 80% 24px;
-      background-attachment: fixed;
-      overflow: hidden;
+        .sale-description {
+          position: absolute;
+          left: 50%;
+          top: 20%;
+          transform: translate(-50%, 25%);
+          text-align: center;
 
-      position: relative;
-
-      .sale-description {
-        position: absolute;
-        left: 50%;
-        top: 20%;
-        transform: translate(-50%, 25%);
-        text-align: center;
-
-        h3 {
-          color: $primaryColor;
-          text-transform: uppercase;
-          font-size: 30px;
-          font-weight: 300;
-
-          margin-bottom: 10px;
-        }
-
-        p {
-          color: white;
-          font-size: 60px;
-          font-weight: 500;
-          text-transform: capitalize;
-          line-height: 60px;
-        }
-
-        .button {
-          margin-top: 20px;
-          a {
-            display: inline-block;
-
-            width: 150px;
-            height: 50px;
-            background: $primaryColor;
-            border-radius: 8px;
-            color: white;
+          h3 {
+            color: $primaryColor;
             text-transform: uppercase;
+            font-size: 30px;
             font-weight: 300;
-            font-size: 14px;
-            padding-top: 15px;
-            text-align: center;
 
-            &:hover {
-              background: rgba(34, 105, 219, 0.904);
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: white;
+            font-size: 60px;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 60px;
+          }
+
+          .button {
+            margin-top: 20px;
+            a {
+              display: inline-block;
+
+              width: 150px;
+              height: 50px;
+              background: $primaryColor;
+              border-radius: 8px;
+              color: white;
+              text-transform: uppercase;
+              font-weight: 300;
+              font-size: 14px;
+              padding-top: 15px;
+              text-align: center;
+
+              &:hover {
+                background: rgba(34, 105, 219, 0.904);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .men {
+    .sale {
+      .background {
+        width: 100%;
+        height: 650px;
+        display: flex;
+
+        background-image: url("https://cdn.shopify.com/s/files/1/0031/6604/4224/files/demo18_02_2048x.png?v=1542736613");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 80% 24px;
+        background-attachment: fixed;
+        overflow: hidden;
+
+        position: relative;
+
+        .sale-description {
+          position: absolute;
+          left: 50%;
+          top: 20%;
+          transform: translate(-50%, 25%);
+          text-align: center;
+
+          h3 {
+            color: $primaryColor;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 300;
+
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: black;
+            font-size: 60px;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 60px;
+          }
+
+          .button {
+            margin-top: 20px;
+            a {
+              display: inline-block;
+
+              width: 150px;
+              height: 50px;
+              background: $primaryColor;
+              border-radius: 8px;
+              color: white;
+              text-transform: uppercase;
+              font-weight: 300;
+              font-size: 14px;
+              padding-top: 15px;
+              text-align: center;
+
+              &:hover {
+                background: rgba(34, 105, 219, 0.904);
+              }
             }
           }
         }
@@ -149,11 +442,10 @@ header {
 
 .product {
   .product-title {
+    margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    margin: 0 20px;
 
     h3 {
       text-transform: uppercase;
@@ -163,15 +455,16 @@ header {
 
     ul {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       li {
-        margin: 0 20px;
-
         a {
           text-transform: uppercase;
           font-size: 14px;
           font-weight: 600;
           color: $secondaryColor;
+          padding: 10px;
 
           &.active {
             color: black;
@@ -184,9 +477,9 @@ header {
       }
     }
 
-    .button-women-sale {
+    .button-sale {
       display: flex;
-      margin: 0 20px;
+
       .button-left {
         width: 35px;
         height: 35px;
@@ -256,7 +549,7 @@ header {
   }
 
   .list-product {
-    margin: 70px 20px;
+    margin: 20px;
     display: flex;
 
     flex-wrap: nowrap;
@@ -327,11 +620,8 @@ header {
       }
 
       .discription {
-        // position: absolute;
-        // bottom: -60%;
-        // left: 0;
-
         text-align: center;
+        background: white;
 
         .brand {
           a {
@@ -387,24 +677,26 @@ header {
         }
 
         form {
-
           display: flex;
-            justify-content: center;
-            align-items: center;
+          justify-content: center;
+          align-items: center;
+
+          // visibility: hidden;
+          // opacity: 0;
+
           .add-to-cart {
             width: 130px;
             height: 40px;
 
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-radius: 8px;
             background: $primaryColor;
 
-            // visibility: hidden;
-            // opacity: 0;
-
-            // position: absolute;
-            // top: 0;
-            // left: 0;
+            &:hover {
+              background: rgba(34, 105, 219, 0.904);
+            }
 
             i {
               color: white;
@@ -432,15 +724,17 @@ header {
         }
 
         .description {
-          transform: translateY(-30px);
-          transition: all 0.4s ease;
+          // position: absolute;
+          // top: -30%;
 
-          // form {
-          //   .add-to-cart {
-          //     visibility: visible;
-          //     opacity: 1;
-          //   }
-          // }
+          transform: translateY(-30%);
+          transition: all 0.4s ease;
+          z-index: 3;
+
+          form {
+            visibility: visible;
+            opacity: 1;
+          }
         }
       }
     }
@@ -448,86 +742,86 @@ header {
 }
 
 .follow-ig {
-  .container {
-    .title {
-      padding: 50px;
-      position: relative;
+  .title {
+    padding: 50px;
+    position: relative;
 
-      .wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-        h2 {
-          text-transform: uppercase;
-          font-weight: 400;
-          font-size: 23px;
+      h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 23px;
 
-          a {
-            color: $primaryColor;
-            text-decoration: underline;
+        a {
+          color: $primaryColor;
+          text-decoration: underline;
 
-            &:hover {
-              text-decoration: none;
-            }
+          &:hover {
+            text-decoration: none;
           }
-        }
-
-        p {
-          text-transform: uppercase;
-          text-align: center;
         }
       }
+
+      p {
+        text-transform: uppercase;
+        text-align: center;
+      }
     }
+  }
 
-    .image-row {
-      display: flex;
+  .image-row {
+    display: flex;
 
-      a {
-        width: 225px;
-        height: 225px;
-        position: relative;
+    a {
+      width: 225px;
+      height: 225px;
+      flex-basis: 16.7%;
+
+      position: relative;
+      transition: all 0.4s ease-in;
+
+      &:hover {
         transition: all 0.4s ease-in;
 
-        &:hover {
-          transition: all 0.4s ease-in;
-          i {
-            visibility: visible;
-            opacity: 1;
-          }
-        }
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.664);
 
-        img {
-          width: 225px;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
 
         i {
-          &::before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.664);
-
-            position: absolute;
-            top: 0;
-            left: 0;
-          }
-
-          font-size: 16px;
-          color: white;
-          width: 225px;
-          height: 225px;
-
-          position: absolute;
-          top: 50%;
-          left: 50%;
-
-          transform: translate(-50%, -50%);
-
-          visibility: hidden;
-          opacity: 0;
+          visibility: visible;
+          opacity: 1;
         }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      i {
+        font-size: 16px;
+        color: white;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        visibility: hidden;
+        opacity: 0;
       }
     }
   }
@@ -645,7 +939,7 @@ footer {
       display: flex;
       flex-wrap: wrap;
       flex-basis: 50%;
-      //justify-content: space-between;
+
       align-items: center;
       align-content: center;
 
@@ -677,9 +971,6 @@ footer {
           height: 25px;
 
           a {
-            // width: 100%;
-            // height: 100%;
-
             img {
               width: 100%;
               height: 100%;
@@ -701,7 +992,7 @@ footer {
     height: 60px;
     border-radius: 8px;
     background-color: $primaryColor;
-    transition: all .4s ease-in;
+    transition: all 0.4s ease-in;
     //position: fixed;
 
     position: fixed;

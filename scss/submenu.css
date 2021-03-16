@@ -1,0 +1,123 @@
+* {
+  font-family: "Hind", sans-serif;
+}
+
+.dropdown-home {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.dropdown-home .container {
+  margin: 0 auto;
+}
+
+.dropdown-home .container .row-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dropdown-home .container .row-top .column {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dropdown-home .container .row-top .column a {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 16px 10px;
+}
+
+.dropdown-home .container .row-top .column ul li a {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 300;
+  color: #777777;
+  padding: 6px 14px 6px;
+}
+
+.dropdown-home .container .row-top .column ul li a:hover {
+  color: #2879fe;
+}
+
+.dropdown-home .container .row-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.dropdown-home .container .row-bottom .column-left {
+  position: relative;
+}
+
+.dropdown-home .container .row-bottom .column-left a {
+  width: 50%;
+  height: 50%;
+}
+
+.dropdown-home .container .row-bottom .column-left a img {
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown-home .container .row-bottom .column-left .small-description {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.dropdown-home .container .row-bottom .column-left .small-description a {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  line-height: 1.5;
+}
+
+.dropdown-home .container .row-bottom .column-left .small-description a span {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: black;
+}
+
+.dropdown-home .container .row-bottom .column-right {
+  position: relative;
+}
+
+.dropdown-home .container .row-bottom .column-right a img {
+  width: 70%;
+  height: 70%;
+}
+
+.dropdown-home .container .row-bottom .column-right .small-description {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.dropdown-home .container .row-bottom .column-right .small-description a {
+  text-transform: lowercase;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+
+.dropdown-home .container .row-bottom .column-right .small-description a span {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+}
+/*# sourceMappingURL=submenu.css.map */
