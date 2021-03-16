@@ -134,8 +134,8 @@ header .container .bottom > ul > li a:hover {
 header .container .bottom > ul > li:hover .dropdown-home {
   visibility: visible;
   opacity: 1;
-  -webkit-transform: translateY(35px);
-          transform: translateY(35px);
+  -webkit-transform: translateY(28px);
+          transform: translateY(28px);
 }
 
 header .container .bottom > ul > li .dropdown-home {
