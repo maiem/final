@@ -1,0 +1,42 @@
+@import "home.scss";
+
+.back-to-top {
+    position: relative;
+  
+    a {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      background-color: $primaryColor;
+      transition: all 0.4s ease-in;
+      //position: fixed;
+  
+      position: fixed;
+      bottom: 80px;
+      right: 2px;
+  
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+  
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+  
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+  
+      &:hover {
+        background: rgba(34, 105, 219, 0.904);
+  
+        &::before {
+          transform: translate(-50%, -100%) rotate(45deg);
+          transition: all 0.4s ease-in;
+        }
+      }
+    }
+  }
+  

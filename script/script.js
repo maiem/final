@@ -37,3 +37,58 @@ const numb = [1,2, -3,4];
 // const newArr = myArr.map((value, index) =>{
 //     return value.split()
 // })
+
+$(function () {
+    console.log("maiem");
+});
+
+// $(function () {
+//     $(".demo").css(
+//         {
+//         "color": "#ccc",
+//         "background": "violet"
+//         });
+// });
+
+// $(function () {
+//    const res = $(".demo").css("background");
+//    console.log(res);
+
+//    const index = res.indexOf(")");
+//     console.log(index);
+// });
+
+//tat thong tin sp bang su kien click, sau 3s hien ra 
+$(function () {
+    $(".add").click(function (e) { 
+        e.preventDefault();
+
+        // $(".demo").css("display", "none");
+        // setTimeout(() =>{
+        //     $(".demo").css("display", "block");
+        // },3000);
+
+        $(".demo").addClass("bg-blue");
+    });
+
+    $(".remove").click(function (e) { 
+        e.preventDefault();
+        
+        $(".demo").removeClass('bg-blue');
+    });
+});
+
+$(function () {
+    $("a").click(function (e) { 
+        //e.preventDefault();  chặn sự kiện mặc định
+        console.log(this);
+        
+    });
+
+    $("form").click(function (e) { 
+        e.preventDefault();
+        console.log(this);
+        
+    });
+});
+

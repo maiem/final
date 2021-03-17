@@ -1,0 +1,29 @@
+.demo {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 300px;
+  height: 150px;
+  background: rgba(238, 130, 238, 0.644);
+}
+
+.demo span {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+}
+
+.demo span.add {
+  top: 5%;
+  right: 5%;
+}
+
+.demo span.remove {
+  bottom: 5%;
+  right: 5%;
+}
+
+.bg-blue {
+  background: blue;
+}
+/*# sourceMappingURL=style.css.map */
