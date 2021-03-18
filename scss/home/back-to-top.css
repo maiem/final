@@ -5,6 +5,8 @@
 html,
 body {
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .back-to-top {

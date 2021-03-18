@@ -1,32 +1,60 @@
-.demo{
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    width: 300px;
-    height: 150px;
-    background: rgba(238, 130, 238, 0.644);
+// .demo{
+//     position: fixed;
+//     left: 20px;
+//     bottom: 20px;
+//     width: 300px;
+//     height: 150px;
+//     background: rgba(238, 130, 238, 0.644);
 
-    span{
-        cursor: pointer;
-        color: white;
-        position: absolute;
+//     span{
+//         cursor: pointer;
+//         color: white;
+//         position: absolute;
 
-        &.add{
-            top: 5%;
-            right: 5%;
-        }
+//         &.add{
+//             top: 5%;
+//             right: 5%;
+//         }
 
-        &.remove{
-            bottom: 5%;
-            right: 5%;
-        }
-    }
-}
+//         &.remove{
+//             bottom: 5%;
+//             right: 5%;
+//         }
+//     }
+//}
 
 // .bg-red{
 //     background: red;
 // }
 
-.bg-blue{
-    background: blue;
-}
+// .bg-blue{
+//     background: blue;
+// }
+ 
+@import "mixin";
+
+ .message1 {
+    @include text-msg(3);
+ }
+ 
+
+ //ccú pháp nesting
+ .message2 {
+    @include text-msg(10);
+ }
+
+
+ ul{
+     li{
+         height: 50px;
+
+
+         //for from 1 to 10: 1->9
+        // for from 1 through 10: 1->10
+         @for $i from 1 through 10 {
+             &:nth-child(#{$i}){
+                background: rgba($color: #000000, $alpha: $i/10);
+             }
+         }
+     }
+ }
