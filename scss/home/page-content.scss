@@ -349,12 +349,15 @@
 
         .rating-star {
           i {
+            &.active{
+              color: #ffb503;
+              font-weight: 600;
+            }
+            
             padding-bottom: 5px;
             font-size: 12px;
             color: $secondaryColor;
 
-            // color: #ffb503;
-            // font-weight: 600;
           }
 
           // @for $var from 1 through 6 {

@@ -367,6 +367,11 @@ body {
   color: #777777;
 }
 
+.product-description .list-product .product .discription .rating-star i.active {
+  color: #ffb503;
+  font-weight: 600;
+}
+
 .product-description .list-product .product .product-name a {
   padding-bottom: 5px;
   font-size: 14px;
