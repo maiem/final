@@ -242,6 +242,7 @@
     align-items: center;
 
     transition: all .3s ease-in;
+    transform: translateY(0);
 
 
     :hover {
@@ -255,6 +256,7 @@
         }
       }
     }
+
     .product {
       position: relative;
       overflow: hidden;

@@ -130,10 +130,10 @@ $( async function () {
     );
 });
 
-function renderProducts(product = [], selector){
-    product.map(val =>(
-        $(content).appendTo(selector);
+// function renderProducts(product = [], selector){
+//     product.map(val =>(
+//         $(content).appendTo(selector);
 
-        //content phai la kieu du lieu string
-    ));
-}
+//         //content phai la kieu du lieu string
+//     ));
+// }

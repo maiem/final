@@ -246,6 +246,8 @@ body {
           align-items: center;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .product-description .list-product :hover .discription {
