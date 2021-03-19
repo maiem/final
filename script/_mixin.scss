@@ -24,3 +24,24 @@
        
     }
  }
+
+ @mixin loader {
+    @keyframes spin{
+        100%{
+           transform: rotate(360deg);
+        }
+    }
+
+    margin: 50px;
+
+     width: 100px;
+     height: 100px;
+
+     border: 10px solid white;
+     border-radius: 50%;
+
+     border-top-color: rgba(0, 60, 255, 0.829);
+     border-bottom-color:  rgba(0, 60, 255, 0.829);
+
+     animation: spin 1s infinite linear;
+ }

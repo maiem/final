@@ -60,23 +60,36 @@
  }
 
 
- @keyframes spin{
-     100%{
-        transform: rotate(360deg);
-     }
+ .loader{
+    @include loader;
  }
 
- .loader{
-     margin: 50px;
+ .products {
+     width: 100vw;
+     height: 100vh;
 
-     width: 100px;
-     height: 100px;
-
-     border: 10px solid white;
-     border-radius: 50%;
-
-     border-top-color: rgba(0, 60, 255, 0.829);
-     border-bottom-color:  rgba(0, 60, 255, 0.829);
-
-     animation: spin 1s infinite linear;
+    .container {
+       width: 100%;
+       height: 100%;
+       margin: 0 auto;
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+ 
+       .item {
+          flex-basis: 22%;
+          height: 400px;
+ 
+          img {
+             width: 100%;
+             height: 300px;
+          }
+ 
+          p {
+             text-align: center;
+             margin-top: 15px;
+          }
+       }
+ 
+    }
  }

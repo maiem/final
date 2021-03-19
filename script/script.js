@@ -7,7 +7,7 @@
 // let s='123456789';
 // console.log(s.substring(1, s.length-3));
 
-const numb = [1,2, -3,4];
+//const numb = [1, 2, -3, 4];
 // const newArr = numb.map((value, index) =>{
 //     // console.log(value);
 //     // console.log(index);
@@ -38,9 +38,11 @@ const numb = [1,2, -3,4];
 //     return value.split()
 // })
 
-$(function () {
-    console.log("maiem");
-});
+
+// $(function () {
+//     console.log("maiem");
+// });
+
 
 // $(function () {
 //     $(".demo").css(
@@ -49,6 +51,7 @@ $(function () {
 //         "background": "violet"
 //         });
 // });
+
 
 // $(function () {
 //    const res = $(".demo").css("background");
@@ -59,81 +62,37 @@ $(function () {
 // });
 
 //tat thong tin sp bang su kien click, sau 3s hien ra 
-$(function () {
-    $(".add").click(function (e) { 
-        e.preventDefault();
+// $(function () {
+//     $(".add").click(function (e) {
+//         e.preventDefault();
 
-        // $(".demo").css("display", "none");
-        // setTimeout(() =>{
-        //     $(".demo").css("display", "block");
-        // },3000);
+//         // $(".demo").css("display", "none");
+//         // setTimeout(() =>{
+//         //     $(".demo").css("display", "block");
+//         // },3000);
 
-        $(".demo").addClass("bg-blue");
-    });
+//         $(".demo").addClass("bg-blue");
+//     });
 
-    $(".remove").click(function (e) { 
-        e.preventDefault();
-        
-        $(".demo").removeClass('bg-blue');
-    });
-});
+//     $(".remove").click(function (e) {
+//         e.preventDefault();
 
-$(function () {
-    $("a").click(function (e) { 
-        //e.preventDefault();  chặn sự kiện mặc định
-        console.log(this);
-        
-    });
+//         $(".demo").removeClass('bg-blue');
+//     });
+// });
 
-    $("form").click(function (e) { 
-        e.preventDefault();
-        console.log(this);
-        
-    });
-});
+// $(function () {
+//     $("a").click(function (e) {
+//         //e.preventDefault();  chặn sự kiện mặc định
+//         console.log(this);
 
+//     });
 
-$( async function () {
-    
-    //cach 1
-    // var settings = {
-    //     "url": "https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json",
-    //     "method": "GET",
-    //     "timeout": 0,
-    //     "headers": {
-    //       "Content-Type": "application/json"
-    //     }
-    //   };
-      
-    //   $.ajax(settings).done(function (response) {
-    //     console.log(response);
-    //   });
+//     $("form").click(function (e) {
+//         e.preventDefault();
+//         console.log(this);
+
+//     });
+// });
 
 
-    //cach 2
-    //   $.ajax({
-    //       type: "method",
-    //       url: "https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json",
-    //       data: "data",
-    //       dataType: "dataType",
-    //       success: function (response) {     
-    //       }
-    //   });
-
-
-    //cach 3
-    //let products;
-    $.get("https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json",
-        function (data) {
-            console.log(data)
-        },
-    );
-});
-
-// function renderProducts(product = [], selector){
-//     product.map(val =>(
-//         $(content).appendTo(selector);
-
-//         //content phai la kieu du lieu string
-//     ));
-// }
