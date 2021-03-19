@@ -43,21 +43,16 @@
           }
 
           .button {
-            margin-top: 20px;
             a {
-              display: inline-block;
-
-              width: 150px;
-              height: 50px;
+              padding: 20px;
+              width: 170px;
               background: $primaryColor;
               border-radius: 8px;
               color: white;
               text-transform: uppercase;
               font-weight: 300;
               font-size: 14px;
-              padding-top: 15px;
-              text-align: center;
-
+             
               &:hover {
                 background: rgba(34, 105, 219, 0.904);
               }
@@ -109,20 +104,15 @@
           }
 
           .button {
-            margin-top: 20px;
             a {
-              display: inline-block;
-
-              width: 150px;
-              height: 50px;
+              padding: 20px;
+              width: 170px;
               background: $primaryColor;
               border-radius: 8px;
               color: white;
               text-transform: uppercase;
               font-weight: 300;
               font-size: 14px;
-              padding-top: 15px;
-              text-align: center;
 
               &:hover {
                 background: rgba(34, 105, 219, 0.904);
@@ -251,12 +241,13 @@
     justify-content: space-between;
     align-items: center;
 
-    transition: all 0.2s ease-in;
+    transition: all .3s ease-in;
+
 
     :hover {
       .discription {
-        transform: translateY(-60%);
-        transition: all 0.2s ease-in;
+        transform: translateY(-40px);
+        transition: all .3s ease-in;
 
         form {
           visibility: visible;
@@ -266,6 +257,7 @@
     }
     .product {
       position: relative;
+      overflow: hidden;
 
       .image-box {
         position: relative;

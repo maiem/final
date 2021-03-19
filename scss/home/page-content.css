@@ -49,22 +49,15 @@ body {
   line-height: 60px;
 }
 
-.page-content .women .sale .background .sale-description .button {
-  margin-top: 20px;
-}
-
 .page-content .women .sale .background .sale-description .button a {
-  display: inline-block;
-  width: 150px;
-  height: 50px;
+  padding: 20px;
+  width: 170px;
   background: #2879fe;
   border-radius: 8px;
   color: white;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
-  padding-top: 15px;
-  text-align: center;
 }
 
 .page-content .women .sale .background .sale-description .button a:hover {
@@ -111,22 +104,15 @@ body {
   line-height: 60px;
 }
 
-.page-content .men .sale .background .sale-description .button {
-  margin-top: 20px;
-}
-
 .page-content .men .sale .background .sale-description .button a {
-  display: inline-block;
-  width: 150px;
-  height: 50px;
+  padding: 20px;
+  width: 170px;
   background: #2879fe;
   border-radius: 8px;
   color: white;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
-  padding-top: 15px;
-  text-align: center;
 }
 
 .page-content .men .sale .background .sale-description .button a:hover {
@@ -258,15 +244,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .product-description .list-product :hover .discription {
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .product-description .list-product :hover .discription form {
@@ -276,6 +262,7 @@ body {
 
 .product-description .list-product .product {
   position: relative;
+  overflow: hidden;
 }
 
 .product-description .list-product .product .image-box {

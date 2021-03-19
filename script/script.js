@@ -92,3 +92,48 @@ $(function () {
     });
 });
 
+
+$( async function () {
+    
+    //cach 1
+    // var settings = {
+    //     "url": "https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json",
+    //     "method": "GET",
+    //     "timeout": 0,
+    //     "headers": {
+    //       "Content-Type": "application/json"
+    //     }
+    //   };
+      
+    //   $.ajax(settings).done(function (response) {
+    //     console.log(response);
+    //   });
+
+
+    //cach 2
+    //   $.ajax({
+    //       type: "method",
+    //       url: "https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json",
+    //       data: "data",
+    //       dataType: "dataType",
+    //       success: function (response) {     
+    //       }
+    //   });
+
+
+    //cach 3
+    //let products;
+    $.get("https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json",
+        function (data) {
+            console.log(data)
+        },
+    );
+});
+
+function renderProducts(product = [], selector){
+    product.map(val =>(
+        $(content).appendTo(selector);
+
+        //content phai la kieu du lieu string
+    ));
+}
