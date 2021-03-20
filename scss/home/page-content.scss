@@ -241,14 +241,12 @@
     justify-content: space-between;
     align-items: center;
 
-    transition: all .3s ease-in;
-    transform: translateY(0);
-
+    transition: all .4s linear;
 
     :hover {
       .discription {
         transform: translateY(-40px);
-        transition: all .3s ease-in;
+        transition: all .4s linear;
 
         form {
           visibility: visible;
@@ -258,9 +256,8 @@
     }
 
     .product {
-      //flex-basis: 18%;
+
       position: relative;
-      overflow: hidden;
 
       .image-box {
         position: relative;
@@ -284,7 +281,7 @@
           margin: 10px;
 
           a {
-            margin: 5px;
+            //margin: 5px;
 
             width: 45px;
             height: 45px;
@@ -310,7 +307,6 @@
               color: black;
               font-size: 14px;
               font-weight: 300;
-              //align-items: center;
 
               position: absolute;
               top: 50%;
@@ -325,6 +321,9 @@
       .discription {
         text-align: center;
         background: white;
+
+        overflow: hidden;
+        //transform: translateY(0);
 
         .brand {
           a {
@@ -354,13 +353,6 @@
             color: $secondaryColor;
 
           }
-
-          // @for $var from 1 through 6 {
-          //     &:nth-child(#{$var}) {
-          //       color: #ffb503;
-          //     font-weight: 600;
-          //     }
-          //   }
         }
       }
 
@@ -414,6 +406,7 @@
           align-items: center;
           border-radius: 8px;
           background: $primaryColor;
+          transform: translateY(40px);
 
           &:hover {
             background: rgba(34, 105, 219, 0.904);

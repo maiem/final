@@ -25,7 +25,7 @@
     }
  }
 
- @mixin loader {
+ @mixin loader($isDual) {
     @keyframes spin{
         100%{
            transform: rotate(360deg);
@@ -40,8 +40,14 @@
      border: 10px solid white;
      border-radius: 50%;
 
-     border-top-color: rgba(0, 60, 255, 0.829);
-     border-bottom-color:  rgba(0, 60, 255, 0.829);
+     @if($isDual == true){
+        border-top-color: rgba(0, 60, 255, 0.829);
+        border-bottom-color:  rgba(0, 60, 255, 0.829);
+        animation: spin 1s infinite linear;
+     }
+     @else{
+        border-left-color:  rgba(0, 60, 255, 0.829);
+        animation: spin 1s infinite linear;
+     }
 
-     animation: spin 1s infinite linear;
  }

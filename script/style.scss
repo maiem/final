@@ -60,25 +60,31 @@
  }
 
 
- .loader{
-    @include loader;
+ .loader1{
+    @include loader(true);
  }
+
+ .loader2{
+   @include loader(false);
+}
 
  .products {
      width: 100vw;
      height: 100vh;
 
     .container {
+       background: #000;
        width: 100%;
        height: 100%;
        margin: 0 auto;
        display: flex;
-       justify-content: space-between;
+       //justify-content: space-between;
        flex-wrap: wrap;
  
        .item {
-          flex-basis: 22%;
-          height: 400px;
+          flex-basis: 23%;
+          height: 300px;
+          margin-right: 16px;
  
           img {
              width: 100%;
@@ -92,4 +98,42 @@
        }
  
     }
+ }
+
+ .mess{
+   margin: 50px;
+   width: 250px;
+   height: 100px;
+   border-radius: 4px;
+   box-shadow: 0 0 4px 4px rgba($color: #ccc, $alpha: .4);
+
+   // border: 1px solid red;
+   position: relative;
+   background: white;
+
+   &::before,
+   &::after {
+      content: '';
+      width: 15px;
+      height: 15px;
+      box-shadow: 0 0 4px 4px rgba($color: #ccc, $alpha: .4);
+
+      // border: 1px solid red;
+
+      position: absolute;
+      left: 50%;
+      top: -7.5px;
+
+      transform: translateX(-50%) rotate(45deg);
+      z-index: -1;
+   }
+
+   &::after {
+      top: -6.5px;
+      background: white;
+      // border: none;
+
+      box-shadow: none;
+      z-index: 1;
+   }
  }

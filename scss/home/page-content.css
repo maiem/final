@@ -244,17 +244,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
 }
 
 .product-description .list-product :hover .discription {
   -webkit-transform: translateY(-40px);
           transform: translateY(-40px);
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
 }
 
 .product-description .list-product :hover .discription form {
@@ -264,7 +262,6 @@ body {
 
 .product-description .list-product .product {
   position: relative;
-  overflow: hidden;
 }
 
 .product-description .list-product .product .image-box {
@@ -296,7 +293,6 @@ body {
 }
 
 .product-description .list-product .product .image-box .list-button a {
-  margin: 5px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -332,6 +328,7 @@ body {
 .product-description .list-product .product .discription {
   text-align: center;
   background: white;
+  overflow: hidden;
 }
 
 .product-description .list-product .product .discription .brand a {
@@ -420,6 +417,8 @@ body {
           align-items: center;
   border-radius: 8px;
   background: #2879fe;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
 }
 
 .product-description .list-product .product form .add-to-cart:hover {

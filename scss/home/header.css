@@ -58,10 +58,10 @@ header .container .top .right-header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
 header .container .top .right-header ul li {
+  position: relative;
   margin-right: 10px;
 }
 
@@ -105,24 +105,34 @@ header .container .top .right-header ul li .ribbon {
 header .container .top .right-header ul li .ribbon .wrapper-ribbon {
   position: relative;
   display: inline;
-  padding: 0 10px;
+  padding: 0 5px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.4);
+          box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.4);
   background: white;
-  -webkit-box-shadow: 0 0 2px 1px rgba(204, 204, 204, 0.8);
-          box-shadow: 0 0 2px 1px rgba(204, 204, 204, 0.8);
-  border-radius: 8px;
 }
 
-header .container .top .right-header ul li .ribbon .wrapper-ribbon::before {
-  content: "";
+header .container .top .right-header ul li .ribbon .wrapper-ribbon::before, header .container .top .right-header ul li .ribbon .wrapper-ribbon::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(204, 204, 204, 0.2);
+          box-shadow: 0 0 1px 1px rgba(204, 204, 204, 0.2);
   position: absolute;
   left: 50%;
-  top: -1px;
-  border-left: 1px solid rgba(128, 128, 128, 0.5);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-  width: 5px;
-  height: 5px;
-  -webkit-transform: translate(-50%, -50%) rotate(135deg);
-          transform: translate(-50%, -50%) rotate(135deg);
+  top: -7.5px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+header .container .top .right-header ul li .ribbon .wrapper-ribbon::after {
+  top: -6.5px;
+  background: white;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  z-index: 1;
 }
 
 header .container .top .right-header ul li .ribbon .wrapper-ribbon span {

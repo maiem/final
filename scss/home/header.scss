@@ -38,9 +38,9 @@ header {
 
           ul {
           display: flex;
-          position: relative;
 
           li {
+            position: relative;
             margin-right: 10px;
 
             &:last-child {
@@ -82,27 +82,36 @@ header {
               .wrapper-ribbon {
                 position: relative;
                 display: inline;
+                padding: 0 5px;
+                border-radius: 4px;
+                box-shadow: 0 0 8px 1px rgba($color: #ccc, $alpha: .4);
 
-                padding: 0 10px;
                 background: white;
-                box-shadow: 0 0 2px 1px rgba($color: #ccc, $alpha: 0.8);
-                border-radius: 8px;
 
-                &::before {
-                  content: "";
-                  position: absolute;
-                  left: 50%;
-                  top: -1px;
+                &::before,
+                &::after {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    box-shadow: 0 0 1px 1px rgba($color: #ccc, $alpha: .2);
 
-                  border-left: 1px solid rgba($color: gray, $alpha: 0.5);
-                  border-bottom: 1px solid rgba($color: gray, $alpha: 0.5);
+                    position: absolute;
+                    left: 50%;
+                    top: -7.5px;
 
-                  width: 5px;
-                  height: 5px;
-                  transform: translate(-50%, -50%) rotate(135deg);
-                  //z-index: -1;
+                    transform: translateX(-50%) rotate(45deg);
+                    z-index: -1;
                 }
 
+                &::after {
+                  top: -6.5px;
+                  background: white;
+                  border: none;
+            
+                  box-shadow: none;
+                  z-index: 1;
+               }
+               
                 span {
                   font-size: 12px;
                   color: black;
