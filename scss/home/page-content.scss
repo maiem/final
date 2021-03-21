@@ -234,13 +234,16 @@
   }
 
   .list-product {
-    margin: 20px;
+    //width: 100vw;
+    //margin: 20px;
     display: flex;
 
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    //flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
 
+    // white-space: nowrap;
+    // overflow: hidden;
     transition: all .4s linear;
 
     :hover {
@@ -256,12 +259,19 @@
     }
 
     .product {
+     flex-basis: 16%;
+    
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+
       .image-box {
         position: relative;
 
         a {
           .img {
-            width: 100%;
+           // width: 100%;
+           object-fit: cover;
           }
         }
 
@@ -278,8 +288,6 @@
           margin: 10px;
 
           a {
-            //margin: 5px;
-
             width: 45px;
             height: 45px;
             border-radius: 50%;

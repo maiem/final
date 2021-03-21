@@ -1,0 +1,454 @@
+// .demo{
+//     position: fixed;
+//     left: 20px;
+//     bottom: 20px;
+//     width: 300px;
+//     height: 150px;
+//     background: rgba(238, 130, 238, 0.644);
+
+//     span{
+//         cursor: pointer;
+//         color: white;
+//         position: absolute;
+
+//         &.add{
+//             top: 5%;
+//             right: 5%;
+//         }
+
+//         &.remove{
+//             bottom: 5%;
+//             right: 5%;
+//         }
+//     }
+//}
+
+// .bg-red{
+//     background: red;
+// }
+
+// .bg-blue{
+//     background: blue;
+// }
+ 
+@import "mixin";
+
+ .message1 {
+    @include text-msg(3);
+ }
+ 
+
+ //ccú pháp nesting
+ .message2 {
+    @include text-msg(10);
+ }
+
+
+ ul{
+     li{
+         height: 50px;
+
+
+         //for from 1 to 10: 1->9
+        // for from 1 through 10: 1->10
+         @for $i from 1 through 10 {
+             &:nth-child(#{$i}){
+                background: rgba($color: #000000, $alpha: $i/10);
+             }
+         }
+     }
+ }
+
+
+ .loader1{
+    @include loader(true);
+ }
+
+ .loader2{
+   @include loader(false);
+}
+
+ .products {
+     width: 100vw;
+     height: 100vh;
+
+    .container {
+       background: #000;
+       width: 100%;
+       height: 100%;
+       margin: 0 auto;
+       display: flex;
+       //justify-content: space-between;
+       flex-wrap: wrap;
+ 
+       .item {
+          flex-basis: 23%;
+          height: 300px;
+          margin-right: 16px;
+ 
+          img {
+             width: 100%;
+             height: 300px;
+          }
+ 
+          p {
+             text-align: center;
+             margin-top: 15px;
+          }
+       }
+ 
+    }
+ }
+
+ .mess{
+   margin: 50px;
+   width: 250px;
+   height: 100px;
+   border-radius: 4px;
+   box-shadow: 0 0 4px 4px rgba($color: #ccc, $alpha: .4);
+
+   // border: 1px solid red;
+   position: relative;
+   background: white;
+
+   &::before,
+   &::after {
+      content: '';
+      width: 15px;
+      height: 15px;
+      box-shadow: 0 0 4px 4px rgba($color: #ccc, $alpha: .4);
+
+      // border: 1px solid red;
+
+      position: absolute;
+      left: 50%;
+      top: -7.5px;
+
+      transform: translateX(-50%) rotate(45deg);
+      z-index: -1;
+   }
+
+   &::after {
+      top: -6.5px;
+      background: white;
+      // border: none;
+
+      box-shadow: none;
+      z-index: 1;
+   }
+ }
+
+ @import "../scss/home/home.scss";
+.product-description {
+   .product-title {
+     margin: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ 
+     h3 {
+       text-transform: uppercase;
+       font-size: 25px;
+       font-weight: 500;
+     }
+ 
+     ul {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+ 
+       li {
+         a {
+           text-transform: uppercase;
+           font-size: 14px;
+           font-weight: 600;
+           color: $secondaryColor;
+           padding: 10px;
+ 
+           &.active {
+             color: black;
+           }
+ 
+           &:hover {
+             color: black;
+           }
+         }
+       }
+     }
+ 
+     .button-sale {
+       display: flex;
+ 
+       .button-left {
+         width: 35px;
+         height: 35px;
+         border-radius: 50%;
+ 
+         margin-right: 10px;
+         position: relative;
+ 
+         &::before {
+           content: "";
+           width: 7px;
+           height: 7px;
+ 
+           position: absolute;
+           top: 50%;
+           left: 50%;
+ 
+           border-top: 1px solid $secondaryColor;
+           border-left: 1px solid $secondaryColor;
+ 
+           transform: translate(-50%, -50%) rotate(-45deg);
+         }
+ 
+         &:hover {
+           background: $primaryColor;
+ 
+           &::before {
+             border-top: 1px solid white;
+             border-left: 1px solid white;
+           }
+         }
+       }
+ 
+       .button-right {
+         width: 35px;
+         height: 35px;
+         border-radius: 50%;
+ 
+         position: relative;
+ 
+         &::after {
+           content: "";
+ 
+           width: 7px;
+           height: 7px;
+ 
+           position: absolute;
+           top: 50%;
+           left: 50%;
+ 
+           border-bottom: 1px solid $secondaryColor;
+           border-right: 1px solid $secondaryColor;
+ 
+           transform: translate(-50%, -50%) rotate(-45deg);
+         }
+ 
+         &:hover {
+           background: $primaryColor;
+ 
+           &::after {
+             border-bottom: 1px solid white;
+             border-right: 1px solid white;
+           }
+         }
+       }
+     }
+   }
+ 
+   .list-product {
+     display: flex;
+ 
+     //flex-wrap: nowrap;
+     justify-content: center;
+     align-items: center;
+ 
+     // white-space: nowrap;
+     // overflow: hidden;
+     transition: all .4s linear;
+ 
+     :hover {
+       .discription {
+         transform: translateY(-40px);
+         transition: all .4s linear;
+ 
+         form {
+           visibility: visible;
+           opacity: 1;
+         }
+       }
+     }
+ 
+     .product {
+      flex-basis: 16%;
+     
+      white-space: nowrap;
+      overflow: hidden;
+      
+       .image-box {
+         position: relative;
+ 
+         a {
+           .img {
+            // width: 100%;
+            object-fit: cover;
+           }
+         }
+ 
+         .list-button {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+ 
+           position: absolute;
+           top: 0;
+           right: 0;
+ 
+           margin: 10px;
+ 
+           a {
+             width: 45px;
+             height: 45px;
+             border-radius: 50%;
+ 
+             background: rgba(255, 255, 255, 0.623);
+             transition: all 0.2s ease-in;
+ 
+             visibility: hidden;
+             opacity: 0;
+             position: relative;
+ 
+             &:hover {
+               background: $primaryColor;
+               transition: all 0.2s ease-in;
+ 
+               i {
+                 color: white;
+               }
+             }
+ 
+             i {
+               color: black;
+               font-size: 14px;
+               font-weight: 300;
+ 
+               position: absolute;
+               top: 50%;
+               left: 50%;
+ 
+               transform: translate(-50%, -50%);
+             }
+           }
+         }
+       }
+ 
+       .discription {
+         text-align: center;
+         background: white;
+ 
+        // overflow: hidden;
+         
+         .brand {
+           a {
+             text-transform: uppercase;
+             font-size: 12px;
+             font-weight: 500;
+             color: $secondaryColor;
+             transition: all 0.2s ease-in;
+ 
+             &:hover {
+               color: $primaryColor;
+               transition: all 0.2s ease-in;
+             }
+           }
+         }
+ 
+         .rating-star {
+           i {
+             &.active{
+               color: #ffb503;
+               font-weight: 600;
+             }
+ 
+             padding-bottom: 5px;
+             font-size: 10px;
+             color: $secondaryColor;
+ 
+           }
+         }
+       }
+ 
+       .product-name {
+         a {
+           padding-bottom: 5px;
+           font-size: 14px;
+           color: rgb(41, 39, 39);
+           text-transform: capitalize;
+           transition: all 0.4s ease-in;
+ 
+           &:hover {
+             color: $primaryColor;
+             transition: all 0.4s ease-in;
+           }
+         }
+       }
+ 
+       .price {
+         p {
+           padding-bottom: 5px;
+           color: rgb(41, 39, 39);
+           font-size: 16px;
+           font-weight: 500;
+         }
+ 
+         .sale {
+           color: rgba(255, 0, 0, 0.87);
+ 
+           span {
+             color: rgb(41, 39, 39);
+             text-decoration: line-through;
+           }
+         }
+       }
+ 
+       form {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+ 
+         visibility: hidden;
+         opacity: 0;
+ 
+         .add-to-cart {
+           width: 130px;
+           height: 40px;
+ 
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border-radius: 8px;
+           background: $primaryColor;
+ 
+           &:hover {
+             background: rgba(34, 105, 219, 0.904);
+           }
+ 
+           i {
+             color: white;
+             font-size: 15px;
+           }
+ 
+           p {
+             padding-left: 10px;
+             text-transform: uppercase;
+             transform: translateY(10%);
+             color: white;
+           }
+         }
+       }
+ 
+       &:hover {
+         .image-box {
+           .list-button {
+             a {
+               visibility: visible;
+               opacity: 1;
+             }
+           }
+         }
+       }
+     }
+   }
+ }
