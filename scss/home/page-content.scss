@@ -237,7 +237,7 @@
     margin: 20px;
     display: flex;
 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
 
@@ -256,9 +256,6 @@
     }
 
     .product {
-
-      position: relative;
-
       .image-box {
         position: relative;
 
@@ -322,12 +319,10 @@
         text-align: center;
         background: white;
 
-        overflow: hidden;
-        //transform: translateY(0);
-
+       // overflow: hidden;
+        
         .brand {
           a {
-            padding: 5px 0;
             text-transform: uppercase;
             font-size: 12px;
             font-weight: 500;
@@ -406,7 +401,6 @@
           align-items: center;
           border-radius: 8px;
           background: $primaryColor;
-          transform: translateY(40px);
 
           &:hover {
             background: rgba(34, 105, 219, 0.904);

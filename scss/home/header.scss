@@ -372,9 +372,12 @@ header {
             width: 100%;
 
             .row-top {
+              margin-bottom: 0;
+
               .column {
                 &:last-child {
                   padding-left: 50px;
+                  padding-right: 0;
                 }
 
                 .button-sale {
@@ -448,9 +451,6 @@ header {
                 }
 
                 .list-product {
-                  // display: flex;
-                  // justify-content: space-between;
-                  // align-items: center;
                   .product {
                     .image-box {
                       a {
@@ -473,6 +473,62 @@ header {
                         p {
                           font-weight: 500;
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .row-bottom{
+              .column-left{
+                a{
+                  img{
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+
+                .small-description{
+                  a{
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-weight: 600;
+                    span{
+                      text-transform: uppercase;
+                      font-size: 16px;
+                      font-weight: 400;
+
+                      strong{
+                        color: $primaryColor;
+                        font-weight: 400;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .column-right{
+                a{
+                  img{
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+
+                .small-description{
+                  a{
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-weight: 600;
+                    span{
+                      text-transform: uppercase;
+                      font-size: 16px;
+                      font-weight: 400;
+
+                      strong{
+                        color: $primaryColor;
+                        font-weight: 400;
                       }
                     }
                   }

@@ -1,7 +1,7 @@
-// const slideContainer = `$('.list-product')`;
-// const slideImage = [...$$('.product')];
+// const slideContainer = $('.list-product');
+// const slideImage = $('.product');
 
-// slideContainer.style.width = `${slideImage.length*IMG_WIDTH}px`;
+// //slideContainer.style.width = `${slideImage.length * IMG_WIDTH}px`;
 // let index = 0;
 
 // function slideNext(){
@@ -26,7 +26,9 @@
 //     slideContainer.style.transform = `translateX(${slideImage.length*IMG_WIDTH}px)`;
 // }
 
-
+// $('button-right').slick('click', ()=>{
+//   slideNext();
+// })
 // $('.button-right').addEventListenner('click',() =>{
 //     slideNext();
 // })
