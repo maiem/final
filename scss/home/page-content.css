@@ -41,19 +41,20 @@ body {
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .page-content .women .sale .background .sale-description p {
   color: white;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 500;
   text-transform: capitalize;
-  line-height: 60px;
+  line-height: 70px;
+  margin-bottom: 20px;
 }
 
 .page-content .women .sale .background .sale-description .button a {
-  padding: 20px;
+  padding: 17px;
   width: 170px;
   background: #2879fe;
   border-radius: 8px;
@@ -94,21 +95,22 @@ body {
 .page-content .men .sale .background .sale-description h3 {
   color: #2879fe;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .page-content .men .sale .background .sale-description p {
   color: black;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 500;
   text-transform: capitalize;
-  line-height: 60px;
+  line-height: 70px;
+  margin-bottom: 20px;
 }
 
 .page-content .men .sale .background .sale-description .button a {
-  padding: 20px;
+  padding: 17px;
   width: 170px;
   background: #2879fe;
   border-radius: 8px;
