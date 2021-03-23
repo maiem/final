@@ -15,7 +15,6 @@ body {
 }
 
 header .top {
-  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +142,7 @@ header .top .container .right-header nav ul li .ribbon .wrapper-ribbon span {
 }
 
 header .bottom {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 header .bottom .container {
@@ -174,7 +173,7 @@ header .bottom .container > ul > li a {
   padding: 20px 10px;
   text-transform: uppercase;
   font-size: 14px;
-  color: #777777;
+  color: black;
 }
 
 header .bottom .container > ul > li a:last-child {
@@ -194,13 +193,15 @@ header .bottom .container > ul > li:hover .dropdown-shop,
 header .bottom .container > ul > li:hover .dropdown-page,
 header .bottom .container > ul > li:hover .dropdown-blog,
 header .bottom .container > ul > li:hover .dropdown-women,
-header .bottom .container > ul > li:hover .dropdown-men {
+header .bottom .container > ul > li:hover .dropdown-men,
+header .bottom .container > ul > li:hover .dropdown-portfolio,
+header .bottom .container > ul > li:hover .dropdown-buy-theme {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 header .bottom .container > ul > li .dropdown-home,
@@ -208,7 +209,9 @@ header .bottom .container > ul > li .dropdown-shop,
 header .bottom .container > ul > li .dropdown-page,
 header .bottom .container > ul > li .dropdown-blog,
 header .bottom .container > ul > li .dropdown-women,
-header .bottom .container > ul > li .dropdown-men {
+header .bottom .container > ul > li .dropdown-men,
+header .bottom .container > ul > li .dropdown-portfolio,
+header .bottom .container > ul > li .dropdown-buy-theme {
   position: absolute;
   left: 0;
   background: white;
@@ -233,7 +236,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top,
 header .bottom .container > ul > li .dropdown-page .row-top,
 header .bottom .container > ul > li .dropdown-blog .row-top,
 header .bottom .container > ul > li .dropdown-women .row-top,
-header .bottom .container > ul > li .dropdown-men .row-top {
+header .bottom .container > ul > li .dropdown-men .row-top,
+header .bottom .container > ul > li .dropdown-portfolio .row-top,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,7 +251,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column,
 header .bottom .container > ul > li .dropdown-page .row-top .column,
 header .bottom .container > ul > li .dropdown-blog .row-top .column,
 header .bottom .container > ul > li .dropdown-women .row-top .column,
-header .bottom .container > ul > li .dropdown-men .row-top .column {
+header .bottom .container > ul > li .dropdown-men .row-top .column,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column {
   padding: 25px;
 }
 
@@ -255,7 +262,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column a,
 header .bottom .container > ul > li .dropdown-page .row-top .column a,
 header .bottom .container > ul > li .dropdown-blog .row-top .column a,
 header .bottom .container > ul > li .dropdown-women .row-top .column a,
-header .bottom .container > ul > li .dropdown-men .row-top .column a {
+header .bottom .container > ul > li .dropdown-men .row-top .column a,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column a,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column a {
   padding-left: 13px;
   font-size: 14px;
   font-weight: 500;
@@ -268,7 +277,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li,
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li {
   position: relative;
 }
 
@@ -277,7 +288,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li a,
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li a,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li a,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li a,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li a {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li a,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li a,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li a {
   text-transform: capitalize;
   font-size: 14px;
   font-weight: 300;
@@ -291,7 +304,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li a:hove
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li a:hover,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li a:hover,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li a:hover,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li a:hover {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li a:hover,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li a:hover,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li a:hover {
   color: #2879fe;
 }
 
@@ -300,7 +315,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li a span
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li a span,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li a span,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li a span,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li a span {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li a span,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li a span,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li a span {
   background: #2879fe;
   color: white;
   font-size: 10px;
@@ -313,7 +330,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li a .pop
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li a .popular,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li a .popular,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li a .popular,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li a .popular {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li a .popular,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li a .popular,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li a .popular {
   background: rgba(255, 166, 0, 0.904);
 }
 
@@ -322,7 +341,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li .image
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li .image-hover,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li .image-hover,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li .image-hover,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li .image-hover {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li .image-hover,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li .image-hover,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li .image-hover {
   position: absolute;
   top: 0;
   left: 100%;
@@ -336,7 +357,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li .image
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li .image-hover img,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li .image-hover img,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li .image-hover img,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li .image-hover img {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li .image-hover img,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li .image-hover img,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li .image-hover img {
   max-width: 150px;
   height: auto;
 }
@@ -346,7 +369,9 @@ header .bottom .container > ul > li .dropdown-shop .row-top .column ul li:hover 
 header .bottom .container > ul > li .dropdown-page .row-top .column ul li:hover .image-hover,
 header .bottom .container > ul > li .dropdown-blog .row-top .column ul li:hover .image-hover,
 header .bottom .container > ul > li .dropdown-women .row-top .column ul li:hover .image-hover,
-header .bottom .container > ul > li .dropdown-men .row-top .column ul li:hover .image-hover {
+header .bottom .container > ul > li .dropdown-men .row-top .column ul li:hover .image-hover,
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column ul li:hover .image-hover,
+header .bottom .container > ul > li .dropdown-buy-theme .row-top .column ul li:hover .image-hover {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(5px);
@@ -360,7 +385,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom,
 header .bottom .container > ul > li .dropdown-page .row-bottom,
 header .bottom .container > ul > li .dropdown-blog .row-bottom,
 header .bottom .container > ul > li .dropdown-women .row-bottom,
-header .bottom .container > ul > li .dropdown-men .row-bottom {
+header .bottom .container > ul > li .dropdown-men .row-bottom,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom {
   margin-bottom: 200px;
   padding: 30px;
   display: -webkit-box;
@@ -375,7 +402,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-left,
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-left,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-left,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-left,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-left {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-left,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-left,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-left {
   position: relative;
 }
 
@@ -384,7 +413,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-left a im
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-left a img,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-left a img,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-left a img,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-left a img {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-left a img,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-left a img,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-left a img {
   width: 90%;
   height: 90%;
 }
@@ -394,7 +425,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-left .sma
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-left .small-description,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-left .small-description,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-left .small-description,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-left .small-description {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-left .small-description,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-left .small-description,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-left .small-description {
   position: absolute;
   top: 20%;
   left: 5%;
@@ -405,7 +438,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-left .sma
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-left .small-description a,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-left .small-description a,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-left .small-description a,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-left .small-description a {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-left .small-description a,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-left .small-description a,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-left .small-description a {
   text-transform: capitalize;
   font-size: 14px;
   font-weight: 400;
@@ -418,7 +453,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-left .sma
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-left .small-description a span,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-left .small-description a span,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-left .small-description a span,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-left .small-description a span {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-left .small-description a span,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-left .small-description a span,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-left .small-description a span {
   font-size: 25px;
   font-weight: 600;
   text-transform: capitalize;
@@ -430,7 +467,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-right,
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-right,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-right,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-right,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-right {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-right,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-right,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-right {
   position: relative;
 }
 
@@ -439,7 +478,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-right a i
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-right a img,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-right a img,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-right a img,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-right a img {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-right a img,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-right a img,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-right a img {
   width: 90%;
   height: 90%;
 }
@@ -449,7 +490,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-right .sm
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-right .small-description,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-right .small-description,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-right .small-description,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-right .small-description {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-right .small-description,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-right .small-description,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-right .small-description {
   position: absolute;
   top: 20%;
   left: 5%;
@@ -460,7 +503,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-right .sm
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-right .small-description a,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-right .small-description a,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-right .small-description a,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-right .small-description a {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-right .small-description a,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-right .small-description a,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-right .small-description a {
   text-transform: lowercase;
   line-height: 1.5;
   font-size: 14px;
@@ -473,7 +518,9 @@ header .bottom .container > ul > li .dropdown-shop .row-bottom .column-right .sm
 header .bottom .container > ul > li .dropdown-page .row-bottom .column-right .small-description a span,
 header .bottom .container > ul > li .dropdown-blog .row-bottom .column-right .small-description a span,
 header .bottom .container > ul > li .dropdown-women .row-bottom .column-right .small-description a span,
-header .bottom .container > ul > li .dropdown-men .row-bottom .column-right .small-description a span {
+header .bottom .container > ul > li .dropdown-men .row-bottom .column-right .small-description a span,
+header .bottom .container > ul > li .dropdown-portfolio .row-bottom .column-right .small-description a span,
+header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-right .small-description a span {
   font-size: 30px;
   font-weight: 600;
   text-transform: capitalize;
@@ -481,19 +528,17 @@ header .bottom .container > ul > li .dropdown-men .row-bottom .column-right .sma
 }
 
 header .bottom .container > ul > li .dropdown-page {
-  width: 270px;
-  height: auto;
+  width: 280px;
   text-transform: capitalize;
   position: absolute;
-  left: 36%;
+  left: 30%;
 }
 
 header .bottom .container > ul > li .dropdown-blog {
   width: 280px;
-  height: auto;
   text-transform: capitalize;
   position: absolute;
-  left: 40%;
+  left: 35%;
 }
 
 header .bottom .container > ul > li .dropdown-blog .row-top {
@@ -501,6 +546,21 @@ header .bottom .container > ul > li .dropdown-blog .row-top {
 }
 
 header .bottom .container > ul > li .dropdown-blog .row-top .column {
+  padding-bottom: 0;
+}
+
+header .bottom .container > ul > li .dropdown-portfolio {
+  width: 280px;
+  text-transform: capitalize;
+  position: absolute;
+  left: 40%;
+}
+
+header .bottom .container > ul > li .dropdown-portfolio .row-top {
+  display: block;
+}
+
+header .bottom .container > ul > li .dropdown-portfolio .row-top .column {
   padding-bottom: 0;
 }
 
@@ -700,5 +760,12 @@ header .bottom .container > ul > li .dropdown-men .row-top .column .shop-now a {
 
 header .bottom .container > ul > li .dropdown-men .row-top .column .shop-now a:hover {
   text-decoration: none;
+}
+
+header .bottom .container > ul > li .dropdown-buy-theme {
+  width: 280px;
+  text-transform: capitalize;
+  position: absolute;
+  left: 65%;
 }
 /*# sourceMappingURL=header.css.map */

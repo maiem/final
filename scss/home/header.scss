@@ -2,8 +2,6 @@
 
 header {
   .top {
-    height: 40px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,7 +122,8 @@ header {
 
   
   .bottom {
-    margin-top: 15px;
+    margin-top: 20px;
+
     .container {
       position: relative;
 
@@ -139,11 +138,12 @@ header {
           &:last-child{
             margin-right: 0;
           }
+
           a {
             padding: 20px 10px;
             text-transform: uppercase;
             font-size: 14px;
-            color: $secondaryColor;
+            color: black;
 
             &:last-child {
               padding-right: 0;
@@ -164,11 +164,13 @@ header {
             .dropdown-page,
             .dropdown-blog,
             .dropdown-women,
-            .dropdown-men {
+            .dropdown-men,
+            .dropdown-portfolio,
+            .dropdown-buy-theme{
               visibility: visible;
               opacity: 1;
               transform: translateY(0);
-              transition: all 0.4s linear;
+              transition: all 0.2s linear;
             }
           }
 
@@ -177,7 +179,9 @@ header {
           .dropdown-page,
           .dropdown-blog,
           .dropdown-women,
-          .dropdown-men {
+          .dropdown-men,
+          .dropdown-portfolio,
+          .dropdown-buy-theme{
             position: absolute;
             left: 0;
             background: white;
@@ -339,18 +343,31 @@ header {
           }
 
           .dropdown-page {
-            width: 270px;
-            height: auto;
-
+            width: 280px;
             text-transform: capitalize;
+
             position: absolute;
-            left: 36%;
+            left: 30%;
           }
 
           .dropdown-blog {
             width: 280px;
-            height: auto;
+            text-transform: capitalize;
 
+            position: absolute;
+            left: 35%;
+
+            .row-top {
+              display: block;
+
+              .column {
+                padding-bottom: 0;
+              }
+            }
+          }
+
+          .dropdown-portfolio {
+            width: 280px;
             text-transform: capitalize;
 
             position: absolute;
@@ -610,6 +627,14 @@ header {
                 }
               }
             }
+          }
+
+          .dropdown-buy-theme {
+            width: 280px;
+            text-transform: capitalize;
+
+            position: absolute;
+            left: 65%;
           }
         }
       }
