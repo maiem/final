@@ -8,4 +8,9 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=home.css.map */

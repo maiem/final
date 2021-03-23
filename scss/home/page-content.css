@@ -9,6 +9,11 @@ body {
           box-sizing: border-box;
 }
 
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
 .page-content .women .sale .background {
   width: 100%;
   height: 650px;
@@ -241,15 +246,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all .4s linear;
-  transition: all .4s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .product-description .list-product :hover .discription {
   -webkit-transform: translateY(-40px);
           transform: translateY(-40px);
-  -webkit-transition: all .4s linear;
-  transition: all .4s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .product-description .list-product :hover .discription form {
@@ -330,6 +335,7 @@ body {
 .product-description .list-product .product .discription {
   text-align: center;
   background: white;
+  overflow: hidden;
 }
 
 .product-description .list-product .product .discription .brand a {

@@ -1,98 +1,113 @@
-// let a = 'maiem';
-// console.log(a);
+$(async function () {
 
-// let b = 10;
-// console.log(typeof String(b));
+    let products = [
+      {
+        id: 1,
+        name: "Pink Pony",
+        image: "../image/Relaxed_.jpg",
+        rating: 5,
+      },
+  
+      {
+        id: 2,
+        name: "Pink Pony",
+        image: "../image/Relaxed_.jpg",
+        rating: 2.5,
+      },
+  
+      {
+        id: 3,
+        name: "Pink Pony",
+        image: "../image/Relaxed_.jpg",
+        rating: 1,
+      },
+  
+      {
+        id: 4,
+        name: "Pink Pony",
+        image: "../image/Relaxed_.jpg",
+        rating: 3.5,
+      },
+  
+    ]
+  
+    renderProduct(products, "#container-products");
 
-// let s='123456789';
-// console.log(s.substring(1, s.length-3));
+    // DOM: document object modal
+  $(".container").on("click", ".delete", function () {
+    console.log("btn delete cliked");
 
-//const numb = [1, 2, -3, 4];
-// const newArr = numb.map((value, index) =>{
-//     // console.log(value);
-//     // console.log(index);
-//     return value * 2;
-// })
-
-
-// const arr =  numb.filter((value,index) =>{
-//     return value %2 == 0;
-// })
-
-
-// const arr =  numb.some((value,index) =>{
-//     return value < 0;
-// })
-
-// const str = ['a','d','y','q'];
-// const arr = str.sort();
-// const newArr = numb.sort((a,b)=>{
-//     return b - a;
-// })
-
-// console.log(newArr);
-
-// const myArr = ['ha mai anh', 'ha huu an', 'ha thanh truc'];
-
-// const newArr = myArr.map((value, index) =>{
-//     return value.split()
-// })
-
-
-// $(function () {
-//     console.log("maiem");
-// });
-
-
-// $(function () {
-//     $(".demo").css(
-//         {
-//         "color": "#ccc",
-//         "background": "violet"
-//         });
-// });
-
-
-// $(function () {
-//    const res = $(".demo").css("background");
-//    console.log(res);
-
-//    const index = res.indexOf(")");
-//     console.log(index);
-// });
-
-//tat thong tin sp bang su kien click, sau 3s hien ra 
-// $(function () {
-//     $(".add").click(function (e) {
-//         e.preventDefault();
-
-//         // $(".demo").css("display", "none");
-//         // setTimeout(() =>{
-//         //     $(".demo").css("display", "block");
-//         // },3000);
-
-//         $(".demo").addClass("bg-blue");
-//     });
-
-//     $(".remove").click(function (e) {
-//         e.preventDefault();
-
-//         $(".demo").removeClass('bg-blue');
-//     });
-// });
-
-// $(function () {
-//     $("a").click(function (e) {
-//         //e.preventDefault();  chặn sự kiện mặc định
-//         console.log(this);
-
-//     });
-
-//     $("form").click(function (e) {
-//         e.preventDefault();
-//         console.log(this);
-
-//     });
-// });
-
-
+    const id = $(this).data("hihi");
+    products = products.filter(val => val.id !== id);
+    renderProduct(products, "#container-prodcuts");
+  });
+  
+    // $(".delete").click(function (e) {
+    //   e.preventDefault();
+  
+    //   const id = $(this).data("hihi");
+  
+    //   console.log(id);
+  
+    //   // products = products.filter(val => {
+    //   //   return val.id !== id;
+    //   // })
+  
+    //   products = products.filter(val => val.id !== id);
+  
+    //   console.log(products);
+  
+    //   renderProduct(products, "#container-products");
+  
+    // });
+  
+  
+  
+  });
+  
+  function renderStar(countStar = 0) {
+    if (countStar === 0)
+      return "";
+  
+    const star = "<li><i class='fas fa-star'></i></li>";
+    const halfStar = '<li><i class="fas fa-star-half-alt"></i></li>';
+  
+    let res = "<ul>";
+    for (let i = 0; i < countStar; i++) {
+      res += star;
+    }
+    // 3.5
+    if (countStar % 1 !== 0) {
+      res += halfStar;
+    }
+    return res += "</ul>";
+  }
+  
+  
+  function renderProduct(products = [], selector) {
+    $(selector).empty();
+  
+    products.map(val => (
+      $(`
+        <div class="item">
+          <div class="content">
+            <img src=${val.image} alt="">
+            <p>${val.name}</p>
+  
+            ${renderStar(val.rating)}
+  
+            <button data-hihi=${val.id} class="delete">Delete</button>
+  
+          </div>
+        </div>
+      `).appendTo(selector)
+  
+    ))
+  }
+  
+  
+  
+  
+  
+ 
+  

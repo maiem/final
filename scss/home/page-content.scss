@@ -1,7 +1,6 @@
 @import "home.scss";
 
 .page-content {
-  //z-index: -1;
   .women {
     .sale {
       .background {
@@ -234,22 +233,16 @@
   }
 
   .list-product {
-    //width: 100vw;
-    //margin: 20px;
     display: flex;
 
-    //flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-
-    // white-space: nowrap;
-    // overflow: hidden;
-    transition: all .4s linear;
+    transition: all .3s linear;
 
     :hover {
       .discription {
         transform: translateY(-40px);
-        transition: all .4s linear;
+        transition: all .3s linear;
 
         form {
           visibility: visible;
@@ -270,7 +263,6 @@
 
         a {
           .img {
-           // width: 100%;
            object-fit: cover;
           }
         }
@@ -327,7 +319,7 @@
         text-align: center;
         background: white;
 
-       // overflow: hidden;
+        overflow: hidden;
         
         .brand {
           a {

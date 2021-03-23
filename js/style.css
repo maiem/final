@@ -122,15 +122,8 @@ ul li:nth-child(10) {
   }
 }
 
-.products {
-  width: 100vw;
-  height: 100vh;
-}
-
 .products .container {
-  background: #000;
-  width: 100%;
-  height: 100%;
+  width: 1200px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,20 +133,55 @@ ul li:nth-child(10) {
 }
 
 .products .container .item {
-  -ms-flex-preferred-size: 23%;
-      flex-basis: 23%;
-  height: 300px;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  height: 400px;
   margin-right: 16px;
 }
 
-.products .container .item img {
+.products .container .item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.products .container .item .content img {
   width: 100%;
   height: 300px;
 }
 
-.products .container .item p {
+.products .container .item .content p {
   text-align: center;
   margin-top: 15px;
+}
+
+.products .container .item .content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products .container .item .content ul li {
+  margin-right: 5px;
+}
+
+.products .container .item .content ul li:last-child {
+  margin-right: 0;
+}
+
+.products .container .item .content ul li i {
+  color: yellow;
+  font-size: 14px;
+}
+
+.products .container button {
+  background: violet;
+  width: 70px;
+  height: 30px;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 8px;
 }
 
 .mess {
