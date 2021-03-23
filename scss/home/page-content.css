@@ -257,12 +257,12 @@ body {
   text-overflow: ellipsis;
 }
 
-.product-description .list-product .product:hover .discription {
+.product-description .list-product .product:hover .description {
   -webkit-transform: translateY(-40px);
           transform: translateY(-40px);
 }
 
-.product-description .list-product .product:hover .discription form {
+.product-description .list-product .product:hover .description form {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -408,7 +408,7 @@ body {
   text-transform: capitalize;
 }
 
-.product-description .list-product .product .discription {
+.product-description .list-product .product .description {
   text-align: center;
   background: white;
   -webkit-transform: translateY(0);
@@ -417,7 +417,7 @@ body {
   transition: all 0.2s linear;
 }
 
-.product-description .list-product .product .discription .brand a {
+.product-description .list-product .product .description .brand a {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
@@ -426,19 +426,19 @@ body {
   transition: all 0.2s ease-in;
 }
 
-.product-description .list-product .product .discription .brand a:hover {
+.product-description .list-product .product .description .brand a:hover {
   color: #2879fe;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
-.product-description .list-product .product .discription .rating-star i {
+.product-description .list-product .product .description .rating-star i {
   padding-bottom: 5px;
   font-size: 10px;
   color: #777777;
 }
 
-.product-description .list-product .product .discription .rating-star i.active {
+.product-description .list-product .product .description .rating-star i.active {
   color: #ffb503;
   font-weight: 600;
 }

@@ -76,7 +76,7 @@
 
         position: relative;
 
-        .sale-description {
+        .sale-description{
           position: absolute;
           left: 50%;
           top: 20%;
@@ -245,7 +245,7 @@
       text-overflow: ellipsis;
 
       &:hover {
-        .discription {
+        .description {
           transform: translateY(-40px);
 
           form {
@@ -391,10 +391,11 @@
               }
             }
           }
+
         }
       }
 
-      .discription {
+      .description {
         text-align: center;
         background: white;
         transform: translateY(0);

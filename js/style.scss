@@ -166,7 +166,7 @@
  }
 
  @import "../scss/home/home.scss";
-.product-description {
+.product- {
    .product-title {
      margin: 20px;
      display: flex;
@@ -286,7 +286,7 @@
      transition: all .4s linear;
  
      :hover {
-       .discription {
+       .description {
          transform: translateY(-40px);
          transition: all .4s linear;
  
@@ -361,7 +361,7 @@
          }
        }
  
-       .discription {
+       .description {
          text-align: center;
          background: white;
  

@@ -70,13 +70,13 @@
   height: 100%;
 }
 
-.dropdown-home .container .row-bottom .column-left .small-description {
+.dropdown-home .container .row-bottom .column-left .small- {
   position: absolute;
   top: 20%;
   left: 5%;
 }
 
-.dropdown-home .container .row-bottom .column-left .small-description a {
+.dropdown-home .container .row-bottom .column-left .small- a {
   text-transform: capitalize;
   font-size: 14px;
   font-weight: 400;
@@ -84,7 +84,7 @@
   line-height: 1.5;
 }
 
-.dropdown-home .container .row-bottom .column-left .small-description a span {
+.dropdown-home .container .row-bottom .column-left .small- a span {
   font-size: 25px;
   font-weight: 600;
   text-transform: capitalize;
@@ -100,13 +100,13 @@
   height: 70%;
 }
 
-.dropdown-home .container .row-bottom .column-right .small-description {
+.dropdown-home .container .row-bottom .column-right .small- {
   position: absolute;
   top: 20%;
   left: 5%;
 }
 
-.dropdown-home .container .row-bottom .column-right .small-description a {
+.dropdown-home .container .row-bottom .column-right .small- a {
   text-transform: lowercase;
   line-height: 1.5;
   font-size: 14px;
@@ -114,7 +114,7 @@
   color: white;
 }
 
-.dropdown-home .container .row-bottom .column-right .small-description a span {
+.dropdown-home .container .row-bottom .column-right .small- a span {
   font-size: 30px;
   font-weight: 600;
   text-transform: capitalize;
