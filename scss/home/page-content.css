@@ -23,9 +23,7 @@ body {
   background-image: url("https://cdn.shopify.com/s/files/1/0031/6604/4224/files/demo18_01_2048x.png?v=1542736595");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 80% 24px;
   background-attachment: fixed;
-  overflow: hidden;
   position: relative;
 }
 
@@ -124,8 +122,12 @@ body {
   background: rgba(34, 105, 219, 0.904);
 }
 
+.product-description {
+  margin-bottom: 50px;
+}
+
 .product-description .product-title {
-  margin: 20px;
+  margin: 50px 20px 20px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,20 +248,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
-}
-
-.product-description .list-product :hover .discription {
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
-}
-
-.product-description .list-product :hover .discription form {
-  visibility: visible;
-  opacity: 1;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .product-description .list-product .product {
@@ -268,6 +258,18 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.product-description .list-product .product:hover .discription {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+
+.product-description .list-product .product:hover .discription form {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .product-description .list-product .product .image-box {
@@ -335,7 +337,10 @@ body {
 .product-description .list-product .product .discription {
   text-align: center;
   background: white;
-  overflow: hidden;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .product-description .list-product .product .discription .brand a {

@@ -11,9 +11,7 @@
         background-image: url("https://cdn.shopify.com/s/files/1/0031/6604/4224/files/demo18_01_2048x.png?v=1542736595");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 80% 24px;
         background-attachment: fixed;
-        overflow: hidden;
 
         position: relative;
 
@@ -125,8 +123,10 @@
 }
 
 .product-description {
+  margin-bottom: 50px;
+
   .product-title {
-    margin: 20px;
+    margin: 50px 20px 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -234,22 +234,11 @@
 
   .list-product {
     display: flex;
-
     justify-content: center;
     align-items: center;
-    transition: all .3s linear;
+    transition: all .2s linear;
 
-    :hover {
-      .discription {
-        transform: translateY(-40px);
-        transition: all .3s linear;
-
-        form {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-    }
+    
 
     .product {
      flex-basis: 16%;
@@ -257,6 +246,19 @@
      white-space: nowrap;
      overflow: hidden;
      text-overflow: ellipsis;
+
+     &:hover {
+      .discription {
+        transform: translateY(-40px);
+
+        form {
+          visibility: visible;
+          opacity: 1;
+
+          transform: translateY(0);
+        }
+      }
+    }
 
       .image-box {
         position: relative;
@@ -318,9 +320,10 @@
       .discription {
         text-align: center;
         background: white;
+        transform: translateY(0px);
+    
+        transition: all .2s linear;
 
-        overflow: hidden;
-        
         .brand {
           a {
             text-transform: uppercase;
