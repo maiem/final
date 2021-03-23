@@ -90,7 +90,7 @@ header .top .container .right-header nav ul li i {
 }
 
 header .top .container .right-header nav ul li .ribbon {
-  padding-top: 29px;
+  padding-top: 35px;
   text-align: center;
   white-space: nowrap;
   visibility: hidden;
@@ -107,27 +107,27 @@ header .top .container .right-header nav ul li .ribbon .wrapper-ribbon {
   position: relative;
   display: inline;
   border-radius: 4px;
-  -webkit-box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.4);
-          box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.4);
+  -webkit-box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.5);
+          box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.5);
   background: white;
 }
 
 header .top .container .right-header nav ul li .ribbon .wrapper-ribbon::before, header .top .container .right-header nav ul li .ribbon .wrapper-ribbon::after {
   content: "";
-  width: 8px;
-  height: 8px;
-  -webkit-box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.2);
-          box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.2);
+  width: 6px;
+  height: 6px;
+  -webkit-box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.5);
+          box-shadow: 0 0 8px 1px rgba(204, 204, 204, 0.5);
   position: absolute;
   left: 50%;
-  top: -4px;
+  top: -3px;
   -webkit-transform: translate(-50%) rotate(45deg);
           transform: translate(-50%) rotate(45deg);
   z-index: -1;
 }
 
 header .top .container .right-header nav ul li .ribbon .wrapper-ribbon::after {
-  top: -3.5px;
+  top: -2.5px;
   background: white;
   border: none;
   -webkit-box-shadow: none;
@@ -137,7 +137,7 @@ header .top .container .right-header nav ul li .ribbon .wrapper-ribbon::after {
 
 header .top .container .right-header nav ul li .ribbon .wrapper-ribbon span {
   padding: 0 5px;
-  font-size: 12px;
+  font-size: 13px;
   color: black;
   text-transform: capitalize;
 }
