@@ -28,11 +28,6 @@
         <link rel="stylesheet" href="../owlcarousel/owl.theme.default.css">
 </head>
 
-<script src="../js/jquery.min.js"></script>
-<script src="../owlcarousel/owl.carousel.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
 
 <body>
     <header id="header">
@@ -1308,7 +1303,7 @@
                         </div>
                     </div>
 
-                    <!-- <div class="product">
+                    <div class="product">
                         <div class="image-box">
                             <img src="https://cdn.shopify.com/s/files/1/0031/6604/4224/products/Rounded_Cat_Eye_Sunglasses_f1da40e7-625e-4361-ba65-66e597145a06_202x.jpg?v=1570226470"
                                 alt="">
@@ -1355,9 +1350,9 @@
                                 </button>
                             </form>
                         </div>
-                    </div> -->
+                    </div>
 
-                    <!-- <div class="product">
+                    <div class="product">
                         <div class="image-box">
                             <img src="https://cdn.shopify.com/s/files/1/0031/6604/4224/products/Saffiano_Leather_Belt_013384fb-f4ca-425a-9865-1a9c0db0f802_202x.jpg?v=1570226472"
                                 alt="">
@@ -1404,7 +1399,7 @@
                                 </button>
                             </form>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -1944,4 +1939,33 @@
     </div>
 </body>
 
+
+<script src="../js/jquery.min.js"></script>
+<script src="../owlcarousel/owl.carousel.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+//     $(document).ready(function(){
+//   $(".list-product").owlCarousel();
+// });
+
+$('.list-product').owlCarousel({
+    rtl:true,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+</script>
 </html>
