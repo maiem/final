@@ -15,6 +15,7 @@ body {
 }
 
 header .top {
+  padding-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,7 +743,7 @@ header .bottom .container > ul > li .dropdown-men .row-top .column .small-descri
 }
 
 header .bottom .container > ul > li .dropdown-men .row-top .column .small-description a strong {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1.5;
