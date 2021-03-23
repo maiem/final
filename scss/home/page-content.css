@@ -124,10 +124,6 @@ body {
   background: rgba(34, 105, 219, 0.904);
 }
 
-.product-description {
-  margin-bottom: 50px;
-}
-
 .product-description .product-title {
   margin: 50px 20px 20px 20px;
   display: -webkit-box;
@@ -339,8 +335,8 @@ body {
 .product-description .list-product .product .discription {
   text-align: center;
   background: white;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
