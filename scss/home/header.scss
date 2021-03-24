@@ -61,7 +61,7 @@ header {
               }
 
               .ribbon {
-                padding-top: 35px;
+                padding-top: 45px;
                 text-align: center;
                 white-space: nowrap;
 
@@ -125,6 +125,7 @@ header {
     margin-top: 20px;
 
     .container {
+      margin: 0 auto;
       position: relative;
 
       > ul {
@@ -397,11 +398,8 @@ header {
             width: 100%;
 
             .row-top {
-              margin-bottom: 0;
-
               .column {
                 &:last-child {
-                  padding-left: 50px;
                   padding-right: 0;
                 }
 
@@ -476,27 +474,43 @@ header {
                 }
 
                 .list-product {
+                  display: flex;
+
                   .product {
+                    flex-basis: 33.3%;
+                    position: relative;
+
                     .image-box {
                       a {
                         img {
-                          // width: 60%;
-                          // height: 60%;
-                          object-fit: cover;
+                          width: 90%;
+                          height: 90%;
                         }
                       }
+                      margin-bottom: 0;
                     }
 
                     .description {
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      transform: translateY(50%);
+
                       .product-name {
                         a {
-                          text-transform: capitalize;
+                         text-transform: capitalize;
                           font-weight: 400;
+                          padding-bottom: 0;
+
+                          &:hover{
+                            color: $primaryColor;
+                          }
                         }
                       }
 
                       .price {
                         p {
+                          padding-left: 13px;
                           font-weight: 500;
                         }
                       }

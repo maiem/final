@@ -90,7 +90,7 @@ header .top .container .right-header nav ul li i {
 }
 
 header .top .container .right-header nav ul li .ribbon {
-  padding-top: 35px;
+  padding-top: 45px;
   text-align: center;
   white-space: nowrap;
   visibility: hidden;
@@ -147,6 +147,7 @@ header .bottom {
 }
 
 header .bottom .container {
+  margin: 0 auto;
   position: relative;
 }
 
@@ -593,12 +594,7 @@ header .bottom .container > ul > li .dropdown-women {
   width: 100%;
 }
 
-header .bottom .container > ul > li .dropdown-women .row-top {
-  margin-bottom: 0;
-}
-
 header .bottom .container > ul > li .dropdown-women .row-top .column:last-child {
-  padding-left: 50px;
   padding-right: 0;
 }
 
@@ -667,17 +663,47 @@ header .bottom .container > ul > li .dropdown-women .row-top .column .button-sal
   border-right: 1px solid white;
 }
 
+header .bottom .container > ul > li .dropdown-women .row-top .column .list-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .bottom .container > ul > li .dropdown-women .row-top .column .list-product .product {
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+  position: relative;
+}
+
+header .bottom .container > ul > li .dropdown-women .row-top .column .list-product .product .image-box {
+  margin-bottom: 0;
+}
+
 header .bottom .container > ul > li .dropdown-women .row-top .column .list-product .product .image-box a img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 90%;
+  height: 90%;
+}
+
+header .bottom .container > ul > li .dropdown-women .row-top .column .list-product .product .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 header .bottom .container > ul > li .dropdown-women .row-top .column .list-product .product .description .product-name a {
   text-transform: capitalize;
   font-weight: 400;
+  padding-bottom: 0;
+}
+
+header .bottom .container > ul > li .dropdown-women .row-top .column .list-product .product .description .product-name a:hover {
+  color: #2879fe;
 }
 
 header .bottom .container > ul > li .dropdown-women .row-top .column .list-product .product .description .price p {
+  padding-left: 13px;
   font-weight: 500;
 }
 
