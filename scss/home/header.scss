@@ -185,6 +185,7 @@ header {
           .dropdown-buy-theme {
             position: absolute;
             left: 0;
+            
             background: white;
             display: flex;
             flex-direction: column;
@@ -203,12 +204,14 @@ header {
               .column {
                 padding: 25px;
 
-                a {
-                  padding-left: 13px;
-                  font-size: 14px;
-                  font-weight: 500;
-                  text-transform: uppercase;
-                  color: black;
+                .categori{
+                  a {
+                    padding-left: 13px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: black;
+                  }
                 }
 
                 ul {
@@ -403,71 +406,68 @@ header {
                   padding-right: 0;
                 }
 
-                .button-sale {
+                .categori{
                   display: flex;
+                  justify-content: space-between;
+                  align-items: center;
 
-                  .button-left {
-                    width: 35px;
-                    height: 35px;
-                    border-radius: 50%;
-
-                    margin-right: 10px;
-                    position: relative;
-
-                    &::before {
-                      content: "";
-                      width: 7px;
-                      height: 7px;
-
-                      position: absolute;
-                      top: 50%;
-                      left: 50%;
-
-                      border-top: 1px solid $secondaryColor;
-                      border-left: 1px solid $secondaryColor;
-
-                      transform: translate(-50%, -50%) rotate(-45deg);
-                    }
-
-                    &:hover {
-                      background: $primaryColor;
-
+                  .button-sale {
+                    display: flex;
+                    margin-right: 20px;
+                    .button-left {
+                      margin-right: 10px;
+                      position: relative;
+  
                       &::before {
-                        border-top: 1px solid white;
-                        border-left: 1px solid white;
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+  
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+  
+                        border-top: 1px solid $secondaryColor;
+                        border-left: 1px solid $secondaryColor;
+  
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                      }
+  
+                      &:hover {
+                        &::before {
+                          border-top: 1px solid $primaryColor;
+                          border-left: 1px solid  $primaryColor;
+                        }
                       }
                     }
-                  }
-
-                  .button-right {
-                    width: 35px;
-                    height: 35px;
-                    border-radius: 50%;
-
-                    position: relative;
-
-                    &::after {
-                      content: "";
-
-                      width: 7px;
-                      height: 7px;
-
-                      position: absolute;
-                      top: 50%;
-                      left: 50%;
-
-                      border-bottom: 1px solid $secondaryColor;
-                      border-right: 1px solid $secondaryColor;
-
-                      transform: translate(-50%, -50%) rotate(-45deg);
-                    }
-
-                    &:hover {
-                      background: $primaryColor;
-
+  
+                    .button-right {
+                      padding-right: 20px;
+                      border-radius: 50%;
+                      
+                      position: relative;
+  
                       &::after {
-                        border-bottom: 1px solid white;
-                        border-right: 1px solid white;
+                        content: "";
+  
+                        width: 10px;
+                        height: 10px;
+  
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+  
+                        border-bottom: 1px solid $secondaryColor;
+                        border-right: 1px solid $secondaryColor;
+  
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                      }
+  
+                      &:hover {
+                        &::after {
+                          border-bottom: 1px solid $primaryColor;
+                          border-right: 1px solid $primaryColor;
+                        }
                       }
                     }
                   }
