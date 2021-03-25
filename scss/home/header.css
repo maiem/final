@@ -217,7 +217,6 @@ header .bottom .container > ul > li .dropdown-women,
 header .bottom .container > ul > li .dropdown-men,
 header .bottom .container > ul > li .dropdown-portfolio,
 header .bottom .container > ul > li .dropdown-buy-theme {
-  width: 100%;
   position: absolute;
   left: 0;
   background: white;
@@ -583,6 +582,7 @@ header .bottom .container > ul > li .dropdown-buy-theme .row-bottom .column-righ
 
 header .bottom .container > ul > li .dropdown-page {
   width: 270px;
+  padding-left: 30px;
   text-transform: capitalize;
   position: absolute;
   left: 30%;
@@ -590,6 +590,7 @@ header .bottom .container > ul > li .dropdown-page {
 
 header .bottom .container > ul > li .dropdown-blog {
   width: 270px;
+  padding-left: 30px;
   text-transform: capitalize;
   position: absolute;
   left: 35%;
@@ -605,6 +606,7 @@ header .bottom .container > ul > li .dropdown-blog .row-top .column {
 
 header .bottom .container > ul > li .dropdown-portfolio {
   width: 270px;
+  padding-left: 30px;
   text-transform: capitalize;
   position: absolute;
   left: 40%;
