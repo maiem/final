@@ -1,154 +1,154 @@
 @import "home.scss";
 
 footer {
+  width: 100%;
+  height: 300px;
+  padding-top: 30px;
+  background: rgb(247, 248, 250);
+  position: relative;
+
+  .container {
     width: 100%;
     height: 300px;
-    padding-top: 30px;
-    background: rgb(247, 248, 250);
-    position: relative;
-  
-    .container {
+
+    .footer-top {
       width: 100%;
-      height: 300px;
-  
-      .footer-top {
-        width: 100%;
-        height: 200px;
-        padding-top: 20px;
-        text-align: center;
-        position: relative;
-  
-        .footer-top-description {
-          width: 700px;
-          height: 100px;
-  
-          position: absolute;
-          top: 0;
-          left: 25%;
-  
-          h4 {
-            text-transform: uppercase;
-            font-size: 16x;
-            font-weight: 500;
-            margin-bottom: 20px;
-          }
-  
-          p {
-            color: $secondaryColor;
-            font-size: 14px;
+      height: 200px;
+      padding-top: 20px;
+      text-align: center;
+      position: relative;
+
+      .footer-top-description {
+        width: 700px;
+        height: 100px;
+
+        position: absolute;
+        top: 0;
+        left: 25%;
+
+        h4 {
+          text-transform: uppercase;
+          font-size: 16x;
+          font-weight: 500;
+          margin-bottom: 20px;
+        }
+
+        p {
+          color: $secondaryColor;
+          font-size: 14px;
+        }
+      }
+
+      .footer-top-input-mail {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+
+        input {
+          width: 650px;
+          height: 40px;
+          //background: rgb(241, 238, 238);
+          border-radius: 8px;
+          text-align: start;
+          padding: 0 10px;
+
+          &:focus {
+            border: 1px solid $primaryColor;
+
+            border-bottom-left-radius: 8px;
+            border-top-left-radius: 8px;
           }
         }
-  
-        .footer-top-input-mail {
-          position: absolute;
-          top: 50%;
-          left: 25%;
-  
-          input {
-            width: 650px;
-            height: 40px;
-            //background: rgb(241, 238, 238);
-            border-radius: 8px;
-            text-align: start;
-            padding: 0 10px;
-  
-            &:focus {
-              border: 1px solid $primaryColor;
-  
-              border-bottom-left-radius: 8px;
-              border-top-left-radius: 8px;
-            }
-          }
-  
-          button {
-            width: 80px;
-            height: 40px;
-            color: white;
-            text-transform: uppercase;
-            border-bottom-right-radius: 8px;
-            border-top-right-radius: 8px;
-            background: $primaryColor;
-  
+
+        button {
+          width: 80px;
+          height: 40px;
+          color: white;
+          text-transform: uppercase;
+          border-bottom-right-radius: 8px;
+          border-top-right-radius: 8px;
+          background: $primaryColor;
+
+          transition: all 0.4s ease;
+          transform: translateX(-40px);
+          cursor: pointer;
+
+          &:hover {
+            background: black;
             transition: all 0.4s ease;
-            transform: translateX(-40px);
-            cursor: pointer;
-  
-            &:hover {
-              background: black;
-              transition: all 0.4s ease;
-            }
           }
         }
-  
-        .footer-top-contact {
-          position: absolute;
-          top: 150px;
-          left: 45%;
-  
-          a {
-            padding: 8px;
-  
-            i {
-              color: $secondaryColor;
+      }
+
+      .footer-top-contact {
+        position: absolute;
+        top: 150px;
+        left: 45%;
+
+        a {
+          padding: 8px;
+
+          i {
+            color: $secondaryColor;
+            transition: all 0.4s ease;
+
+            &:hover {
+              color: white;
               transition: all 0.4s ease;
-  
-              &:hover {
-                color: white;
-                transition: all 0.4s ease;
-              }
             }
           }
         }
       }
-  
-      .footer-bottom {
-        height: 50px;
-        background: white;
-        position: absolute;
-        top: 0;
-        transform: translateY(240px);
-        padding: 30px 70px;
-  
+    }
+
+    .footer-bottom {
+      height: 50px;
+      background: white;
+      position: absolute;
+      top: 0;
+
+      transform: translateY(240px);
+      padding: 30px 70px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        margin-right: 200px;
+
         display: flex;
-        flex-wrap: wrap;
-        flex-basis: 50%;
-  
+        justify-content: space-between;
         align-items: center;
-        align-content: center;
-  
-        .logo {
-          margin-right: 200px;
-  
+
+        a {
+          img {
+            margin-right: 10px;
+          }
+        }
+
+        p {
+          color: $secondaryColor;
+          font-size: 14px;
+          text-transform: capitalize;
+        }
+      }
+
+      .payments {
+        ul {
           display: flex;
           justify-content: space-between;
           align-items: center;
-  
-          a {
-            img {
-              margin-right: 10px;
-            }
-          }
-  
-          p {
-            color: $secondaryColor;
-            font-size: 14px;
-            text-transform: capitalize;
-          }
-        }
-  
-        ul.payments {
-          display: flex;
           margin-left: 200px;
+
           li {
             width: 60px;
-            height: 25px;
-  
+            height: 30px;
+
             a {
               img {
                 width: 100%;
                 height: 100%;
-  
-                padding: 3px;
               }
             }
           }
@@ -156,3 +156,4 @@ footer {
       }
     }
   }
+}

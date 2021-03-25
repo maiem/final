@@ -44,20 +44,18 @@
  }
 
 
- ul{
-     li{
-         height: 50px;
-
-
-         //for from 1 to 10: 1->9
-        // for from 1 through 10: 1->10
-         @for $i from 1 through 10 {
-             &:nth-child(#{$i}){
-                background: rgba($color: #000000, $alpha: $i/10);
-             }
-         }
-     }
- }
+//  ul{
+//      li{
+//          height: 50px;
+//          //for from 1 to 10: 1->9
+//         //for from 1 through 10: 1->10
+//          @for $i from 1 through 10 {
+//              &:nth-child(#{$i}){
+//                 background: rgba($color: #000000, $alpha: $i/10);
+//              }
+//          }
+//      }
+//  }
 
 
  .loader1{
@@ -67,6 +65,8 @@
  .loader2{
    @include loader(false);
 }
+
+
 
 .products {
   .container {

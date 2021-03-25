@@ -233,9 +233,9 @@
 
   .list-product {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    transition: all 0.2s linear;
+    transition: all 0.2s ease-in;
 
     .product {
       flex-basis: 16%;
