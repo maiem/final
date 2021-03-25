@@ -188,6 +188,8 @@ header {
           .dropdown-men,
           .dropdown-portfolio,
           .dropdown-buy-theme {
+            width: 100%;
+
             position: absolute;
             left: 0;
 
@@ -212,7 +214,7 @@ header {
                 &:first-child{
                   padding-left: 30px;
                 }
-
+                
                 width: 285px;
                 .categori {
                   a {
@@ -372,7 +374,6 @@ header {
 
           .dropdown-page {
             width: 270px;
-            padding-left: 30px;
             text-transform: capitalize;
 
             position: absolute;
@@ -381,7 +382,6 @@ header {
 
           .dropdown-blog {
             width: 270px;
-            padding-left: 30px;
             text-transform: capitalize;
 
             position: absolute;
@@ -391,15 +391,17 @@ header {
               display: block;
 
               .column {
-                padding-bottom: 0;
+                &:last-child{
+                  padding-left: 30px;
+                }
               }
             }
           }
 
           .dropdown-portfolio {
             width: 270px;
-            padding-left: 30px;
             text-transform: capitalize;
+
 
             position: absolute;
             left: 40%;
@@ -408,7 +410,9 @@ header {
               display: block;
 
               .column {
-                padding-bottom: 0;
+                &:last-child{
+                  padding-left: 30px;
+                }
               }
             }
           }
@@ -417,7 +421,6 @@ header {
             .row-top {
               .column {
                 width: 200px;
-
                 &:last-child{
                   width: 50%;
                 }
