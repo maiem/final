@@ -238,6 +238,7 @@ header .bottom .container > ul > li .dropdown-buy-theme {
   z-index: 2;
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
+  padding: 15px;
 }
 
 header .bottom .container > ul > li .dropdown-home .row-top,
