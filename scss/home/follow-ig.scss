@@ -36,17 +36,15 @@
     .image-row {
       display: flex;
       transition: all .4s ease-in;
-
       a {
         width: 225px;
         height: 225px;
         flex-basis: 16.7%;
   
         position: relative;
+        transition: all .4s ease-in;
   
         &:hover {
-          transition: all .4s ease-in;
-  
           &::before {
             content: "";
             width: 100%;
@@ -56,6 +54,8 @@
             position: absolute;
             top: 0;
             left: 0;
+
+            transition: all .4s ease-in;
           }
   
           i {
